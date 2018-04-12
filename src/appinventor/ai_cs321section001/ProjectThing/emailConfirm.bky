@@ -1,0 +1,48 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="(.;!O;tkN4aAFf)L-47W" x="-595" y="-996">
+    <mutation component_type="Button" instance_name="Submit" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Submit</field>
+    <statement name="DO">
+      <block type="controls_if" id="7]pCF=4`Sc-x2:{_T_l-">
+        <value name="IF0">
+          <block type="logic_compare" id=".cBF_|^I6g0x$aM8D-)a">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="-3j_JCN5qulknarG3e1y">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="numberConf"></mutation>
+                <field name="COMPONENT_SELECTOR">numberConf</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="component_method" id="Qvvgx(y~TRG*qa|Vv%`S">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                <field name="COMPONENT_SELECTOR">LocalDB</field>
+                <value name="ARG0">
+                  <block type="text" id="0^W_payrl~Zmi4;)$f)R">
+                    <field name="TEXT">randomNum1</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="E%U#Hcy_jt)6W6r^HU5x">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreen" id="y]a-~YTS=XAf=Ek.gB3s">
+            <value name="SCREEN">
+              <block type="text" id="T-:YfV]r@4L,[K1SU]pL">
+                <field name="TEXT">Screen1</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="167" language-version="21"></yacodeblocks>
+</xml>

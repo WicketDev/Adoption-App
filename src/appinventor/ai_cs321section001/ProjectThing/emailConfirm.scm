@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["ai2.appinventor.mit.edu"],"YaVersion":"167","Source":"Form","Properties":{"$Name":"emailConfirm","$Type":"Form","$Version":"23","AlignHorizontal":"3","AlignVertical":"2","AppName":"ProjectThing","BackgroundColor":"&HFFCCCCCC","Title":"emailConfirm","Uuid":"0","$Components":[{"$Name":"confirmationNumber","$Type":"Label","$Version":"4","Text":"Enter confirmation number here:","Uuid":"1553752125"},{"$Name":"numberConf","$Type":"TextBox","$Version":"5","Hint":"Hint for TextBox1","NumbersOnly":"True","Uuid":"-493114306"},{"$Name":"Submit","$Type":"Button","$Version":"6","BackgroundColor":"&HFF444444","Text":"Confirm","TextColor":"&HFFFFFFFF","Uuid":"231071662"},{"$Name":"AdoptionDB","$Type":"TinyWebDB","$Version":"2","Uuid":"1874428519"},{"$Name":"LocalDB","$Type":"TinyDB","$Version":"1","Uuid":"766532411"}]}}
+|#

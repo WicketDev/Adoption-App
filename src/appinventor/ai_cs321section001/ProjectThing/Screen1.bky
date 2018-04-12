@@ -1,0 +1,134 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="wNg;s;b,FQp3J2a2qmo3" x="-153" y="-586">
+    <mutation component_type="Button" instance_name="createButton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">createButton</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id=":O3h1gl5r.jf5m)OAekS">
+        <value name="SCREEN">
+          <block type="text" id="o?0xKjPg6YIL1G~yRQDI">
+            <field name="TEXT">Registration</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="x}K+is=bj~~GGpk39LWU" x="-164" y="-433">
+    <mutation component_type="Button" instance_name="loginButton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">loginButton</field>
+    <statement name="DO">
+      <block type="controls_if" id="eSEjpf+`sH_T.kUBa[=k">
+        <value name="IF0">
+          <block type="component_set_get" id="EcA$x5k1{#NE;Q4yV~!T">
+            <mutation component_type="CheckBox" set_or_get="get" property_name="Checked" is_generic="false" instance_name="ageVerificationCheck"></mutation>
+            <field name="COMPONENT_SELECTOR">ageVerificationCheck</field>
+            <field name="PROP">Checked</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="M,rw^m?MLmD!sb:2h%(G">
+            <value name="IF0">
+              <block type="logic_compare" id="1Z=)K3A~WJL`nfxdnPgn">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="component_set_get" id=".md.ZO%%_nM^$pBSQ~RW">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="emailText"></mutation>
+                    <field name="COMPONENT_SELECTOR">emailText</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text" id="Z3#)k6qpt_1SVG%?o$sf">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="#WKa,q9LIus5~({=.GRP">
+                <value name="IF0">
+                  <block type="logic_compare" id="$uRGS%.^EBbsgHe8j^+p">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="component_set_get" id="cut;{-#Cw@{/s220AYs`">
+                        <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="passwordText"></mutation>
+                        <field name="COMPONENT_SELECTOR">passwordText</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="7X[^K)2s,!4(b}}?fW(!">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="local_declaration_statement" id="C6O(!dBE{)qWO}bnQQTN">
+                    <mutation>
+                      <localname name="retrievalData"></localname>
+                    </mutation>
+                    <field name="VAR0">retrievalData</field>
+                    <value name="DECL0">
+                      <block type="lists_create_with" id="%;$280@cbCMh0fEi=g_V">
+                        <mutation items="0"></mutation>
+                      </block>
+                    </value>
+                    <statement name="STACK">
+                      <block type="component_method" id="}!Q423s_bs43:t!.Ip+S">
+                        <mutation component_type="TinyWebDB" method_name="GetValue" is_generic="false" instance_name="AdoptionDB"></mutation>
+                        <field name="COMPONENT_SELECTOR">AdoptionDB</field>
+                        <value name="ARG0">
+                          <block type="component_set_get" id="W9)TP)-6{A(`_pX?]ZJ)">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="emailText"></mutation>
+                            <field name="COMPONENT_SELECTOR">emailText</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="lists_add_items" id="5;yy;V=NG};CY?Iac!t|">
+                            <mutation items="1"></mutation>
+                            <value name="LIST">
+                              <block type="lexical_variable_get" id="W6!Y~F6gB2CxSuDw.~cM">
+                                <field name="VAR">retrievalData</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="controls_if" id="99^_%;d,Ue2%)jb%%8#M">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="X1l2~/uH;w@sUS8*)JvW">
+                                    <field name="OP">EQ</field>
+                                    <value name="A">
+                                      <block type="component_set_get" id="]U;-CXNtId2M4:n0)~pT">
+                                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="emailText"></mutation>
+                                        <field name="COMPONENT_SELECTOR">emailText</field>
+                                        <field name="PROP">Text</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="controls_openAnotherScreen" id="G@sC7(Xwsvy)c%9Ou_GU">
+                                    <value name="SCREEN">
+                                      <block type="text" id="{b/*#@/S{=UsLM[]$E16">
+                                        <field name="TEXT">FormPage</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="167" language-version="21"></yacodeblocks>
+</xml>
