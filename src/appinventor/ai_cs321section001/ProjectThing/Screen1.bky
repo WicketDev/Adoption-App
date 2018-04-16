@@ -1,7 +1,16 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="m#?!XK{?nK-}%-8$8*W$" x="-209" y="-652">
+    <field name="NAME">pw</field>
+    <value name="VALUE">
+      <block type="text" id="QQGruM8GwYfS2q[~GC:$">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
   <block type="component_event" id="wNg;s;b,FQp3J2a2qmo3" x="-153" y="-586">
     <mutation component_type="Button" instance_name="createButton" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">createButton</field>
+    <comment pinned="false" h="80" w="160">If user needs to create a new account, this button sends them to the registration page.</comment>
     <statement name="DO">
       <block type="controls_openAnotherScreen" id=":O3h1gl5r.jf5m)OAekS">
         <value name="SCREEN">
@@ -15,6 +24,7 @@
   <block type="component_event" id="x}K+is=bj~~GGpk39LWU" x="-164" y="-433">
     <mutation component_type="Button" instance_name="loginButton" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">loginButton</field>
+    <comment pinned="false" h="80" w="160">If user is logging into app, age verification must be checked, and userID(phone number) and password cannot be left blank. If all of the above is true, calls Database and checks for tag that is phonenumber and verifies that the password matches. If not, notifies user of login error and gives a chance to correct, other wise, opens the Forms Page.</comment>
     <statement name="DO">
       <block type="controls_if" id="eSEjpf+`sH_T.kUBa[=k">
         <value name="IF0">
@@ -63,66 +73,70 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block type="local_declaration_statement" id="C6O(!dBE{)qWO}bnQQTN">
-                    <mutation>
-                      <localname name="retrievalData"></localname>
-                    </mutation>
-                    <field name="VAR0">retrievalData</field>
-                    <value name="DECL0">
-                      <block type="lists_create_with" id="%;$280@cbCMh0fEi=g_V">
-                        <mutation items="0"></mutation>
+                  <block type="lexical_variable_set" id="%U-8p)Oh[08#To5})~pS">
+                    <field name="VAR">global pw</field>
+                    <value name="VALUE">
+                      <block type="component_set_get" id="9JWqN!]_WEqY]BJ@R)IY">
+                        <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="passwordText"></mutation>
+                        <field name="COMPONENT_SELECTOR">passwordText</field>
+                        <field name="PROP">Text</field>
                       </block>
                     </value>
-                    <statement name="STACK">
-                      <block type="component_method" id="}!Q423s_bs43:t!.Ip+S">
-                        <mutation component_type="TinyWebDB" method_name="GetValue" is_generic="false" instance_name="AdoptionDB"></mutation>
-                        <field name="COMPONENT_SELECTOR">AdoptionDB</field>
-                        <value name="ARG0">
-                          <block type="component_set_get" id="W9)TP)-6{A(`_pX?]ZJ)">
-                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="emailText"></mutation>
-                            <field name="COMPONENT_SELECTOR">emailText</field>
-                            <field name="PROP">Text</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="lists_add_items" id="5;yy;V=NG};CY?Iac!t|">
-                            <mutation items="1"></mutation>
-                            <value name="LIST">
-                              <block type="lexical_variable_get" id="W6!Y~F6gB2CxSuDw.~cM">
-                                <field name="VAR">retrievalData</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="NAgYXgWLb@n0Nnh3z|fc">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="izmY739([A%Ns;8MX@5D">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="component_method" id="6v0@):q+5e3Zr3zInc0[">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                            <field name="COMPONENT_SELECTOR">LocalDB</field>
+                            <value name="ARG0">
+                              <block type="component_set_get" id="W9)TP)-6{A(`_pX?]ZJ)">
+                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="emailText"></mutation>
+                                <field name="COMPONENT_SELECTOR">emailText</field>
+                                <field name="PROP">Text</field>
                               </block>
                             </value>
-                            <next>
-                              <block type="controls_if" id="99^_%;d,Ue2%)jb%%8#M">
-                                <value name="IF0">
-                                  <block type="logic_compare" id="X1l2~/uH;w@sUS8*)JvW">
-                                    <field name="OP">EQ</field>
-                                    <value name="A">
-                                      <block type="component_set_get" id="]U;-CXNtId2M4:n0)~pT">
-                                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="emailText"></mutation>
-                                        <field name="COMPONENT_SELECTOR">emailText</field>
-                                        <field name="PROP">Text</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="controls_openAnotherScreen" id="G@sC7(Xwsvy)c%9Ou_GU">
-                                    <value name="SCREEN">
-                                      <block type="text" id="{b/*#@/S{=UsLM[]$E16">
-                                        <field name="TEXT">FormPage</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
+                            <value name="ARG1">
+                              <block type="text" id="B3J:%I28AKWu;m77~#AX">
+                                <field name="TEXT">User ID not found.</field>
                               </block>
-                            </next>
+                            </value>
                           </block>
-                        </next>
+                        </value>
+                        <value name="B">
+                          <block type="lexical_variable_get" id="%R}WX`IAn]PMCBddbCv]">
+                            <field name="VAR">global pw</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="controls_openAnotherScreen" id="G@sC7(Xwsvy)c%9Ou_GU">
+                        <value name="SCREEN">
+                          <block type="text" id="{b/*#@/S{=UsLM[]$E16">
+                            <field name="TEXT">FormPage</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="component_method" id="Oan;G5Vkm$hyAG#tJr]x">
+                        <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                        <field name="COMPONENT_SELECTOR">Notifier1</field>
+                        <value name="ARG0">
+                          <block type="text" id="v`:rNH:{W|JchCPC2KQh">
+                            <field name="TEXT">Password does not match</field>
+                          </block>
+                        </value>
                       </block>
                     </statement>
                   </block>
-                </statement>
+                </next>
               </block>
             </statement>
           </block>

@@ -2,8 +2,10 @@
   <block type="component_event" id="(.;!O;tkN4aAFf)L-47W" x="-595" y="-996">
     <mutation component_type="Button" instance_name="Submit" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Submit</field>
+    <comment pinned="false" h="80" w="160">This screen allows user to enter a random number that was texted to the phone number provided. If they match, it sends user to login page, if not it notifies user of error.</comment>
     <statement name="DO">
       <block type="controls_if" id="7]pCF=4`Sc-x2:{_T_l-">
+        <mutation else="1"></mutation>
         <value name="IF0">
           <block type="logic_compare" id=".cBF_|^I6g0x$aM8D-)a">
             <field name="OP">EQ</field>
@@ -24,7 +26,7 @@
                   </block>
                 </value>
                 <value name="ARG1">
-                  <block type="text" id="E%U#Hcy_jt)6W6r^HU5x">
+                  <block type="text" id="H+STl`0Sjw4A?=ydL=,U">
                     <field name="TEXT"></field>
                   </block>
                 </value>
@@ -37,6 +39,17 @@
             <value name="SCREEN">
               <block type="text" id="T-:YfV]r@4L,[K1SU]pL">
                 <field name="TEXT">Screen1</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="#5T(jZoF+R[Qyp2$U@5(">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="E%U#Hcy_jt)6W6r^HU5x">
+                <field name="TEXT">confirmation number does not match</field>
               </block>
             </value>
           </block>
