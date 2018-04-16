@@ -7,6 +7,11 @@
       </block>
     </value>
   </block>
+  <block type="component_event" id="hO9*_03Z,j~c~(R{x9g4" x="337" y="-648">
+    <mutation component_type="Button" instance_name="PWReset" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">PWReset</field>
+    <comment pinned="false" h="80" w="160">Needs to be handled.</comment>
+  </block>
   <block type="component_event" id="wNg;s;b,FQp3J2a2qmo3" x="-153" y="-586">
     <mutation component_type="Button" instance_name="createButton" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">createButton</field>
@@ -27,6 +32,7 @@
     <comment pinned="false" h="80" w="160">If user is logging into app, age verification must be checked, and userID(phone number) and password cannot be left blank. If all of the above is true, calls Database and checks for tag that is phonenumber and verifies that the password matches. If not, notifies user of login error and gives a chance to correct, other wise, opens the Forms Page.</comment>
     <statement name="DO">
       <block type="controls_if" id="eSEjpf+`sH_T.kUBa[=k">
+        <mutation else="1"></mutation>
         <value name="IF0">
           <block type="component_set_get" id="EcA$x5k1{#NE;Q4yV~!T">
             <mutation component_type="CheckBox" set_or_get="get" property_name="Checked" is_generic="false" instance_name="ageVerificationCheck"></mutation>
@@ -36,13 +42,14 @@
         </value>
         <statement name="DO0">
           <block type="controls_if" id="M,rw^m?MLmD!sb:2h%(G">
+            <mutation else="1"></mutation>
             <value name="IF0">
               <block type="logic_compare" id="1Z=)K3A~WJL`nfxdnPgn">
                 <field name="OP">NEQ</field>
                 <value name="A">
                   <block type="component_set_get" id=".md.ZO%%_nM^$pBSQ~RW">
-                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="emailText"></mutation>
-                    <field name="COMPONENT_SELECTOR">emailText</field>
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="phoneText"></mutation>
+                    <field name="COMPONENT_SELECTOR">phoneText</field>
                     <field name="PROP">Text</field>
                   </block>
                 </value>
@@ -55,6 +62,7 @@
             </value>
             <statement name="DO0">
               <block type="controls_if" id="#WKa,q9LIus5~({=.GRP">
+                <mutation else="1"></mutation>
                 <value name="IF0">
                   <block type="logic_compare" id="$uRGS%.^EBbsgHe8j^+p">
                     <field name="OP">NEQ</field>
@@ -82,63 +90,104 @@
                         <field name="PROP">Text</field>
                       </block>
                     </value>
-                  </block>
-                </statement>
-                <next>
-                  <block type="controls_if" id="NAgYXgWLb@n0Nnh3z|fc">
-                    <mutation else="1"></mutation>
-                    <value name="IF0">
-                      <block type="logic_compare" id="izmY739([A%Ns;8MX@5D">
-                        <field name="OP">EQ</field>
-                        <value name="A">
-                          <block type="component_method" id="6v0@):q+5e3Zr3zInc0[">
-                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
-                            <field name="COMPONENT_SELECTOR">LocalDB</field>
-                            <value name="ARG0">
-                              <block type="component_set_get" id="W9)TP)-6{A(`_pX?]ZJ)">
-                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="emailText"></mutation>
-                                <field name="COMPONENT_SELECTOR">emailText</field>
+                    <next>
+                      <block type="controls_if" id="NAgYXgWLb@n0Nnh3z|fc">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="izmY739([A%Ns;8MX@5D">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="component_method" id="6v0@):q+5e3Zr3zInc0[">
+                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                <value name="ARG0">
+                                  <block type="component_set_get" id="W9)TP)-6{A(`_pX?]ZJ)">
+                                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="phoneText"></mutation>
+                                    <field name="COMPONENT_SELECTOR">phoneText</field>
+                                    <field name="PROP">Text</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="text" id="B3J:%I28AKWu;m77~#AX">
+                                    <field name="TEXT">User ID not found.</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="lexical_variable_get" id="%R}WX`IAn]PMCBddbCv]">
+                                <field name="VAR">global pw</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="controls_openAnotherScreenWithStartValue" id="$~~xTM#ix5jGbAFl?5DE">
+                            <comment pinned="false" h="80" w="160">Should pass the phone number to form page to add to entry.</comment>
+                            <value name="SCREENNAME">
+                              <block type="text" id="{b/*#@/S{=UsLM[]$E16">
+                                <field name="TEXT">FormPage</field>
+                              </block>
+                            </value>
+                            <value name="STARTVALUE">
+                              <block type="component_set_get" id="t0IcSVlMkQ47.v}1roI,">
+                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="phoneText"></mutation>
+                                <field name="COMPONENT_SELECTOR">phoneText</field>
                                 <field name="PROP">Text</field>
                               </block>
                             </value>
-                            <value name="ARG1">
-                              <block type="text" id="B3J:%I28AKWu;m77~#AX">
-                                <field name="TEXT">User ID not found.</field>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="component_method" id="Oan;G5Vkm$hyAG#tJr]x">
+                            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                            <field name="COMPONENT_SELECTOR">Notifier1</field>
+                            <value name="ARG0">
+                              <block type="text" id="v`:rNH:{W|JchCPC2KQh">
+                                <field name="TEXT">Password does not match</field>
                               </block>
                             </value>
                           </block>
-                        </value>
-                        <value name="B">
-                          <block type="lexical_variable_get" id="%R}WX`IAn]PMCBddbCv]">
-                            <field name="VAR">global pw</field>
-                          </block>
-                        </value>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="component_method" id="()Cu)}ny9FxVLS)([BdV">
+                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Notifier1</field>
+                    <value name="ARG0">
+                      <block type="text" id="G?egjoL(m}[9.=CQ_?q?">
+                        <field name="TEXT">Password cannot be left blank</field>
                       </block>
                     </value>
-                    <statement name="DO0">
-                      <block type="controls_openAnotherScreen" id="G@sC7(Xwsvy)c%9Ou_GU">
-                        <value name="SCREEN">
-                          <block type="text" id="{b/*#@/S{=UsLM[]$E16">
-                            <field name="TEXT">FormPage</field>
-                          </block>
-                        </value>
-                      </block>
-                    </statement>
-                    <statement name="ELSE">
-                      <block type="component_method" id="Oan;G5Vkm$hyAG#tJr]x">
-                        <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
-                        <field name="COMPONENT_SELECTOR">Notifier1</field>
-                        <value name="ARG0">
-                          <block type="text" id="v`:rNH:{W|JchCPC2KQh">
-                            <field name="TEXT">Password does not match</field>
-                          </block>
-                        </value>
-                      </block>
-                    </statement>
                   </block>
-                </next>
+                </statement>
               </block>
             </statement>
+            <statement name="ELSE">
+              <block type="component_method" id="1!X]dH46U921N=z#XpY=">
+                <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                <field name="COMPONENT_SELECTOR">Notifier1</field>
+                <value name="ARG0">
+                  <block type="text" id=";I(zNS[Zd1^NYfpbfiev">
+                    <field name="TEXT">UserID cannot be left blank.</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="3!hlXxR7ln^W|WEtHHhR">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="PAB^=bDG7{1nDGpK5E[N">
+                <field name="TEXT">Must verify age.</field>
+              </block>
+            </value>
           </block>
         </statement>
       </block>

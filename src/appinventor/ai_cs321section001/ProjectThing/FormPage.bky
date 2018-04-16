@@ -79,12 +79,122 @@
       </block>
     </value>
   </block>
-  <block type="component_event" id="/#Fnol#DJbylynJOqM4D" x="-701" y="-141">
+  <block type="component_event" id="EVdSqNGo.SyaCeDON]*Q" x="-760" y="-182">
+    <mutation component_type="ListPicker" instance_name="userIdentity" event_name="AfterPicking"></mutation>
+    <field name="COMPONENT_SELECTOR">userIdentity</field>
+    <comment pinned="false" h="80" w="160">displays selection on button.</comment>
+    <statement name="DO">
+      <block type="component_set_get" id="FUx`0S34:*Wa!,}nVf}a">
+        <mutation component_type="ListPicker" set_or_get="set" property_name="Text" is_generic="false" instance_name="userIdentity"></mutation>
+        <field name="COMPONENT_SELECTOR">userIdentity</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="eeY,n{y6P2lwRhQsbNnB">
+            <mutation component_type="ListPicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="userIdentity"></mutation>
+            <field name="COMPONENT_SELECTOR">userIdentity</field>
+            <field name="PROP">Selection</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="R}+`nsGCbF.PZ1261WX`" x="-242" y="-179">
+    <mutation component_type="ListPicker" instance_name="Gender" event_name="AfterPicking"></mutation>
+    <field name="COMPONENT_SELECTOR">Gender</field>
+    <comment pinned="false" h="80" w="160">Displays selection on button.</comment>
+    <statement name="DO">
+      <block type="component_set_get" id=")$=yx@^%6eI:x,E,UrR#">
+        <mutation component_type="ListPicker" set_or_get="set" property_name="Text" is_generic="false" instance_name="Gender"></mutation>
+        <field name="COMPONENT_SELECTOR">Gender</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="JaB$HQ_6x`,ramE-2a$0">
+            <mutation component_type="ListPicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="Gender"></mutation>
+            <field name="COMPONENT_SELECTOR">Gender</field>
+            <field name="PROP">Selection</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="[f;W/14Wi2;xC0}b.}%#" x="-755" y="-93">
+    <mutation component_type="ListPicker" instance_name="StateOfBirth" event_name="AfterPicking"></mutation>
+    <field name="COMPONENT_SELECTOR">StateOfBirth</field>
+    <comment pinned="false" h="80" w="160">Displays selection on button.</comment>
+    <statement name="DO">
+      <block type="component_set_get" id="*Tvb%IPaA^#Q[bsxrg2D">
+        <mutation component_type="ListPicker" set_or_get="set" property_name="Text" is_generic="false" instance_name="StateOfBirth"></mutation>
+        <field name="COMPONENT_SELECTOR">StateOfBirth</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="bl0m~RT}GZS[?sHnXrU5">
+            <mutation component_type="ListPicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="StateOfBirth"></mutation>
+            <field name="COMPONENT_SELECTOR">StateOfBirth</field>
+            <field name="PROP">Selection</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="YqVP.z8:g,[mnFEk^hq_" x="192" y="-140">
+    <mutation component_type="Button" instance_name="SearchButton" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">SearchButton</field>
+    <comment pinned="false" h="80" w="160">When search button is clicked, search begins by most specific data, so names, then DOB, then city, state, gender. Each time adding 10% to the final match count. We need to determine a thresh hold, such as 50% to say we may have a match and then determine how to notify parties.</comment>
+  </block>
+  <block type="component_event" id="-/{{Zu@.P1XNbDuYNl(L" x="-224" y="-84">
+    <mutation component_type="DatePicker" instance_name="DOB" event_name="AfterDateSet"></mutation>
+    <field name="COMPONENT_SELECTOR">DOB</field>
+    <comment pinned="false" h="80" w="160">Displays selection on button.</comment>
+    <statement name="DO">
+      <block type="component_set_get" id="0a*;7gGO{v7YPrd9;1NW">
+        <mutation component_type="DatePicker" set_or_get="set" property_name="Text" is_generic="false" instance_name="DOB"></mutation>
+        <field name="COMPONENT_SELECTOR">DOB</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="text_join" id="`ty;ZYBT2R3[?CFA7O^H">
+            <mutation items="5"></mutation>
+            <value name="ADD0">
+              <block type="component_set_get" id="4s8G-(NX{)W6WYWQ!})_">
+                <mutation component_type="DatePicker" set_or_get="get" property_name="MonthInText" is_generic="false" instance_name="DOB"></mutation>
+                <field name="COMPONENT_SELECTOR">DOB</field>
+                <field name="PROP">MonthInText</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="Y`~41~`w9Hp](w[?15/!">
+                <field name="TEXT">/</field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="component_set_get" id="XQ]{jv2W[i:DnUq]d`[v">
+                <mutation component_type="DatePicker" set_or_get="get" property_name="Day" is_generic="false" instance_name="DOB"></mutation>
+                <field name="COMPONENT_SELECTOR">DOB</field>
+                <field name="PROP">Day</field>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="text" id="6++%$cs;xNJ]L8Vqc=R]">
+                <field name="TEXT">/</field>
+              </block>
+            </value>
+            <value name="ADD4">
+              <block type="component_set_get" id="n4xZE/F=H4^5[kr`x0dG">
+                <mutation component_type="DatePicker" set_or_get="get" property_name="Year" is_generic="false" instance_name="DOB"></mutation>
+                <field name="COMPONENT_SELECTOR">DOB</field>
+                <field name="PROP">Year</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="/#Fnol#DJbylynJOqM4D" x="-764" y="79">
     <mutation component_type="Button" instance_name="SubmitButton" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">SubmitButton</field>
     <comment pinned="false" h="91" w="1439">When user submits info, user identity, dob, and gender must be selected. If other fields are left blank, it takes the empty string or null value and inputs that into the DB list. The DB list format is:
 tag(User++)
-[identity of user, gender of child, dob, child's first name, child's last name, mother's first name, mother's last name, city of birth, state of birth] (should we add phone number here? If so, need a way to pull it from the login page to avoid making user reenter)
+[identity of user, gender of child, dob, child's first name, child's last name, mother's first name, mother's last name, city of birth, state of birth, phone number] (should we add phone number here? If so, need a way to pull it from the login page to avoid making user reenter)
 Upon submit, these elements, in this order, are added to a list and then the list is saved into the database.
     </comment>
     <statement name="DO">
@@ -389,73 +499,267 @@ Upon submit, these elements, in this order, are added to a list and then the lis
                                                       </block>
                                                     </statement>
                                                     <next>
-                                                      <block type="lists_add_items" id="Q);tuby!uu(}Zo!{H{bk">
-                                                        <mutation items="9"></mutation>
-                                                        <value name="LIST">
-                                                          <block type="lexical_variable_get" id=".^nMU@2R+B:1:H7YPYL8">
-                                                            <field name="VAR">global entry</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ITEM0">
-                                                          <block type="lexical_variable_get" id="NO1sh{RFZ~.?UoN4OnyT">
-                                                            <field name="VAR">global userID</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ITEM1">
-                                                          <block type="lexical_variable_get" id="U2d999+BDMEVX-;;_cb}">
-                                                            <field name="VAR">global gender</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ITEM2">
-                                                          <block type="lexical_variable_get" id="[B+4?F)I56;S.61OyZ5c">
-                                                            <field name="VAR">global childDOB</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ITEM3">
-                                                          <block type="lexical_variable_get" id=",^-4Z.hg|obP_{:-PuTj">
-                                                            <field name="VAR">global childFName</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ITEM4">
-                                                          <block type="lexical_variable_get" id="yVP(Xh1QF3|+BGuk.haJ">
-                                                            <field name="VAR">global childLName</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ITEM5">
-                                                          <block type="lexical_variable_get" id="fY[DxippX%vr,%[Fss@@">
-                                                            <field name="VAR">global momFName</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ITEM6">
-                                                          <block type="lexical_variable_get" id="zFv1iGQqSa~UsO%5oOkb">
-                                                            <field name="VAR">global momLName</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ITEM7">
-                                                          <block type="lexical_variable_get" id="v1.}FW!zbeytC(v0A/Q3">
-                                                            <field name="VAR">global cityOfBirth</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="ITEM8">
-                                                          <block type="lexical_variable_get" id="qUgo_Pd^7e-N_-fKZ*b[">
-                                                            <field name="VAR">global stateOfBirth</field>
-                                                          </block>
-                                                        </value>
-                                                        <next>
-                                                          <block type="component_method" id="pz6$kU3WKf9P*ET[9I$w">
-                                                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
-                                                            <field name="COMPONENT_SELECTOR">LocalDB</field>
-                                                            <value name="ARG0">
-                                                              <block type="text" id="dN.Iev[V)6~Xt5J5;]OL">
-                                                                <field name="TEXT">User1</field>
-                                                                <comment pinned="false" h="80" w="160">Can make the tag be "User1" and have the 1 increment. I don't know how to do that in this app, I dont see any User++ option.</comment>
-                                                              </block>
-                                                            </value>
-                                                            <value name="ARG1">
-                                                              <block type="lexical_variable_get" id="LV`@3hP-fA(xljRk$*:g">
+                                                      <block type="lexical_variable_set" id="/U3^m3W;c@,9de`hT5#S">
+                                                        <field name="VAR">global entry</field>
+                                                        <value name="VALUE">
+                                                          <block type="lists_create_with" id="#d_@SaFY74uViXeNpDO/">
+                                                            <mutation items="2"></mutation>
+                                                            <value name="ADD0">
+                                                              <block type="lexical_variable_get" id="9FbEP9r|k,CLZ:8K[{g(">
                                                                 <field name="VAR">global entry</field>
                                                               </block>
                                                             </value>
+                                                            <value name="ADD1">
+                                                              <block type="text" id="2X{J-_W#RX$y1?kr2j3U">
+                                                                <field name="TEXT"></field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="lists_add_items" id="Q);tuby!uu(}Zo!{H{bk">
+                                                            <mutation items="10"></mutation>
+                                                            <value name="LIST">
+                                                              <block type="lexical_variable_get" id=".^nMU@2R+B:1:H7YPYL8">
+                                                                <field name="VAR">global entry</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM0">
+                                                              <block type="lexical_variable_get" id="NO1sh{RFZ~.?UoN4OnyT">
+                                                                <field name="VAR">global userID</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM1">
+                                                              <block type="lexical_variable_get" id="U2d999+BDMEVX-;;_cb}">
+                                                                <field name="VAR">global gender</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM2">
+                                                              <block type="lexical_variable_get" id="[B+4?F)I56;S.61OyZ5c">
+                                                                <field name="VAR">global childDOB</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM3">
+                                                              <block type="lexical_variable_get" id=",^-4Z.hg|obP_{:-PuTj">
+                                                                <field name="VAR">global childFName</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM4">
+                                                              <block type="lexical_variable_get" id="yVP(Xh1QF3|+BGuk.haJ">
+                                                                <field name="VAR">global childLName</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM5">
+                                                              <block type="lexical_variable_get" id="fY[DxippX%vr,%[Fss@@">
+                                                                <field name="VAR">global momFName</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM6">
+                                                              <block type="lexical_variable_get" id="zFv1iGQqSa~UsO%5oOkb">
+                                                                <field name="VAR">global momLName</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM7">
+                                                              <block type="lexical_variable_get" id="v1.}FW!zbeytC(v0A/Q3">
+                                                                <field name="VAR">global cityOfBirth</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM8">
+                                                              <block type="lexical_variable_get" id="qUgo_Pd^7e-N_-fKZ*b[">
+                                                                <field name="VAR">global stateOfBirth</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ITEM9">
+                                                              <block type="controls_getStartValue" id="6]yA~i4TE(sN!+Kaw:dt">
+                                                                <comment pinned="false" h="80" w="160">should get the passed phone number from login page.</comment>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="component_method" id="1?:J!ci,$sZYpsXK9nQP">
+                                                                <mutation component_type="TinyDB" method_name="ClearTag" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                <value name="ARG0">
+                                                                  <block type="text_join" id="E4Gy6[#KP)xtFV:(:%N!">
+                                                                    <mutation items="2"></mutation>
+                                                                    <value name="ADD0">
+                                                                      <block type="lexical_variable_get" id="vycP0,38Iuak8zH`Q1Q(">
+                                                                        <field name="VAR">global userID</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD1">
+                                                                      <block type="component_method" id="l:G786-_==FHB];9xWMr">
+                                                                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                        <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                        <comment pinned="false" h="80" w="160">First call should yield no result and set to 1, afterwards it should store the value plus 1.</comment>
+                                                                        <value name="ARG0">
+                                                                          <block type="text" id="#I3F]ETx#_4/5w9k(lWV">
+                                                                            <field name="TEXT">counter</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ARG1">
+                                                                          <block type="text" id="@Zsy?|1);Y-en!E6]HXS">
+                                                                            <field name="TEXT">1</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="component_method" id="pz6$kU3WKf9P*ET[9I$w">
+                                                                    <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                    <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                    <comment pinned="false" h="80" w="160">This should create a unique key for user info by increment the counter variable. Ex. "child1"</comment>
+                                                                    <value name="ARG0">
+                                                                      <block type="text_join" id="u::(n_^fV@0B/|_X68Ak">
+                                                                        <mutation items="2"></mutation>
+                                                                        <value name="ADD0">
+                                                                          <block type="lexical_variable_get" id="PnZPiSWJZ(])hucr|f/5">
+                                                                            <field name="VAR">global userID</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ADD1">
+                                                                          <block type="component_method" id="q-P8JQh}3$H%$po`*~{(">
+                                                                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                            <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                            <comment pinned="false" h="80" w="160">First call should yield no result and set to 1, afterwards it should store the value plus 1.</comment>
+                                                                            <value name="ARG0">
+                                                                              <block type="text" id="d3r6b`%Sf.B``N9_sSFV">
+                                                                                <field name="TEXT">counter</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="ARG1">
+                                                                              <block type="text" id="-fP*GI!f[1^u.GH^PK,4">
+                                                                                <field name="TEXT">1</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ARG1">
+                                                                      <block type="lexical_variable_get" id="LV`@3hP-fA(xljRk$*:g">
+                                                                        <field name="VAR">global entry</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="component_method" id="bJMD/OstFCYD:`:Ra_yJ">
+                                                                        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                                                                        <field name="COMPONENT_SELECTOR">Notifier1</field>
+                                                                        <value name="ARG0">
+                                                                          <block type="component_method" id="u$-L2@-I~If#g6YtZnNG">
+                                                                            <mutation component_type="TinyDB" method_name="GetTags" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                            <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ARG1">
+                                                                          <block type="text" id="f_fL;j5i_YOFtE{3.YH4">
+                                                                            <field name="TEXT">Tags</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ARG2">
+                                                                          <block type="text" id="i0D2^5hd.6b22/8U%[R*">
+                                                                            <field name="TEXT">OK</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="component_method" id="UL@u/c[5Ej[YhO$xleo9">
+                                                                            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                                                                            <field name="COMPONENT_SELECTOR">Notifier1</field>
+                                                                            <value name="ARG0">
+                                                                              <block type="component_method" id="(PJG.^n#5s8~W%S1w_uq">
+                                                                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                                <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                                <value name="ARG0">
+                                                                                  <block type="text_join" id="nh2h__}*Vl;b%H%UjWk!">
+                                                                                    <mutation items="2"></mutation>
+                                                                                    <value name="ADD0">
+                                                                                      <block type="lexical_variable_get" id="MYJ:XJ7Nm{ioMB=f)i!%">
+                                                                                        <field name="VAR">global userID</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="ADD1">
+                                                                                      <block type="component_method" id="QQExBHx}FJdovjd+}GaH">
+                                                                                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                                        <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                                        <comment pinned="false" h="80" w="160">First call should yield no result and set to 1, afterwards it should store the value plus 1.</comment>
+                                                                                        <value name="ARG0">
+                                                                                          <block type="text" id="n=.2Om:uxT,8.IoF)024">
+                                                                                            <field name="TEXT">counter</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="ARG1">
+                                                                                          <block type="text" id="tyu9*H##w35`OLVeu%)M">
+                                                                                            <field name="TEXT">1</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="ARG1">
+                                                                                  <block type="text" id="o-3K`[7A$h;jY_W:)K*b">
+                                                                                    <field name="TEXT">Not found.</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="ARG1">
+                                                                              <block type="text" id="Zz$_XDRx;mXeqN*w+8}d">
+                                                                                <field name="TEXT">Success</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="ARG2">
+                                                                              <block type="text" id="{WBkMk%GyS[Lm:cwLkcS">
+                                                                                <field name="TEXT">OK</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="component_method" id="-eDrIjAQ=e6`(,7U$4*I">
+                                                                                <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                                <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                                <value name="ARG0">
+                                                                                  <block type="text" id="ytEW4`LnK]C99Mu2J(x(">
+                                                                                    <field name="TEXT">counter</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="ARG1">
+                                                                                  <block type="math_add" id=":*m73/z*pEw-dwOYGlnY">
+                                                                                    <mutation items="2"></mutation>
+                                                                                    <value name="NUM0">
+                                                                                      <block type="component_method" id="x4HO,u?0w#VFK5tSGFQz">
+                                                                                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                                        <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                                        <comment pinned="false" h="80" w="160">Increments the counter</comment>
+                                                                                        <value name="ARG0">
+                                                                                          <block type="text" id="gUDKwGV:_XA8FXz]Ji(w">
+                                                                                            <field name="TEXT">counter</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="ARG1">
+                                                                                          <block type="text" id="Qv`^UeRy2vVS*IxJ#DSD">
+                                                                                            <field name="TEXT">1</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="NUM1">
+                                                                                      <block type="math_number" id="8TO+1C)lV#8tbdngFSfM">
+                                                                                        <field name="NUM">1</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
                                                           </block>
                                                         </next>
                                                       </block>
@@ -518,10 +822,9 @@ Upon submit, these elements, in this order, are added to a list and then the lis
       </block>
     </statement>
   </block>
-  <block type="component_event" id="YqVP.z8:g,[mnFEk^hq_" x="192" y="-140">
-    <mutation component_type="Button" instance_name="SearchButton" event_name="Click"></mutation>
-    <field name="COMPONENT_SELECTOR">SearchButton</field>
-    <comment pinned="false" h="80" w="160">When search button is clicked, search begins by most specific data, so names, then DOB, then city, state, gender. Each time adding 10% to the final match count. We need to determine a thresh hold, such as 50% to say we may have a match and then determine how to notify parties.</comment>
+  <block type="component_method" id="zoPm[Icy3q|R:Y_)fEY~" x="-270" y="1517">
+    <mutation component_type="TinyDB" method_name="GetTags" is_generic="false" instance_name="LocalDB"></mutation>
+    <field name="COMPONENT_SELECTOR">LocalDB</field>
   </block>
   <yacodeblocks ya-version="167" language-version="21"></yacodeblocks>
 </xml>

@@ -107,45 +107,30 @@
                   </block>
                 </value>
                 <next>
-                  <block type="component_method" id="9~{=P0D9%ma405_+m:av">
-                    <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
-                    <field name="COMPONENT_SELECTOR">LocalDB</field>
-                    <value name="ARG0">
-                      <block type="text" id="viVxC!j,q4wml:1w^MKv">
-                        <field name="TEXT">phone</field>
-                      </block>
-                    </value>
-                    <value name="ARG1">
-                      <block type="lexical_variable_get" id="bZ`jI,6Q1IAH$wA?Fr.R">
-                        <field name="VAR">global phone</field>
+                  <block type="lexical_variable_set" id="6Gh=XDseZj)MZPxeqkW|">
+                    <field name="VAR">global password</field>
+                    <value name="VALUE">
+                      <block type="component_set_get" id=",8PTwJc.w14dU@xdv)FC">
+                        <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="PasswordTextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">PasswordTextBox1</field>
+                        <field name="PROP">Text</field>
                       </block>
                     </value>
                     <next>
-                      <block type="lexical_variable_set" id="6Gh=XDseZj)MZPxeqkW|">
-                        <field name="VAR">global password</field>
-                        <value name="VALUE">
-                          <block type="component_set_get" id=",8PTwJc.w14dU@xdv)FC">
-                            <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="PasswordTextBox1"></mutation>
-                            <field name="COMPONENT_SELECTOR">PasswordTextBox1</field>
-                            <field name="PROP">Text</field>
+                      <block type="component_method" id="9~{=P0D9%ma405_+m:av">
+                        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
+                        <field name="COMPONENT_SELECTOR">LocalDB</field>
+                        <comment pinned="false" h="71" w="619">My emulation failed, probably because this doesn't create a unique tag. Each registration would have the same tag of "phone" which is not unique. Need a way to fix this. Probably use the number as the tag and store the password as the value.  I updated this and it now works.</comment>
+                        <value name="ARG0">
+                          <block type="lexical_variable_get" id="bZ`jI,6Q1IAH$wA?Fr.R">
+                            <field name="VAR">global phone</field>
                           </block>
                         </value>
-                        <next>
-                          <block type="component_method" id="wv7Eqs!IpH6tTa}FMD+Z">
-                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
-                            <field name="COMPONENT_SELECTOR">LocalDB</field>
-                            <value name="ARG0">
-                              <block type="text" id="]P)Oq99|HsQ0B8(nIXyx">
-                                <field name="TEXT">password</field>
-                              </block>
-                            </value>
-                            <value name="ARG1">
-                              <block type="lexical_variable_get" id="+^vA.gO.zJ)s+=W|T/=H">
-                                <field name="VAR">global password</field>
-                              </block>
-                            </value>
+                        <value name="ARG1">
+                          <block type="lexical_variable_get" id="1;4APi8bUE~tuNZP)N]#">
+                            <field name="VAR">global password</field>
                           </block>
-                        </next>
+                        </value>
                       </block>
                     </next>
                   </block>
