@@ -1,0 +1,224 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="@V6LF+{$4Vhe*/LemmH9" x="-603" y="-878">
+    <field name="NAME">randomNum</field>
+    <value name="VALUE">
+      <block type="math_random_int" id="2`Uog~lXVZw$}PzDP%Sh">
+        <value name="FROM">
+          <block type="math_number" id="DL4AA/ok~~V!@HEGAYK$">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number" id="^=-`qF}mLWeul5RMH?|s">
+            <field name="NUM">100000</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="vg{P|jtdp61VcZ}Ob$Ge" x="-605" y="-845">
+    <field name="NAME">entry</field>
+    <value name="VALUE">
+      <block type="lists_create_with" id="9d#4O]@n,d/}-C|T/JP(">
+        <mutation items="0"></mutation>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="q(#irxZxxg?fDiv|+)AW" x="-605" y="-818">
+    <field name="NAME">phone</field>
+    <value name="VALUE">
+      <block type="text" id="knBW=/1uB0ur|LqI(:48">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id=")Y-FxGBS$DZ{pGCZr{#3" x="-606" y="-788">
+    <field name="NAME">password</field>
+    <value name="VALUE">
+      <block type="text" id="qUAMkCn|]SDt7LQq9%+G">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="lI7Ns;fWkc~+?H{91],;" x="-254" y="-771">
+    <mutation component_type="Button" instance_name="Cancel" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Cancel</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="O*kz0(}Q6dAgeYwUXKMl">
+        <value name="SCREEN">
+          <block type="text" id="oqD?CCEFmyjbde[)t^[s">
+            <field name="TEXT">Screen1</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="T%1+_l(.Fs{-/hR|DKj%" x="-508" y="-666">
+    <mutation component_type="Button" instance_name="Submit" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Submit</field>
+    <comment pinned="false" h="80" w="160">Checks that the phone number and password match, if so, adds to local DB using the phone number as the tag and storing the password as the value, then opens the email confirmation page.</comment>
+    <statement name="DO">
+      <block type="controls_if" id="6TG.pX(GC5ZNOB=#9?Tl">
+        <value name="IF0">
+          <block type="logic_compare" id="sce8a/+jLD;MnidS=kK_">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="text_changeCase" id="YjFhN[cS0Vw)66rySi03">
+                <field name="OP">DOWNCASE</field>
+                <value name="TEXT">
+                  <block type="component_set_get" id="cy`pIXLq:SuRYUM^ZG^%">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="phoneText"></mutation>
+                    <field name="COMPONENT_SELECTOR">phoneText</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text_changeCase" id="U6++MG4BR:*W?UOd*7r/">
+                <field name="OP">DOWNCASE</field>
+                <value name="TEXT">
+                  <block type="component_set_get" id="@-Q7r.-__7n-xR8WzgBj">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="PhoneTextConfirm"></mutation>
+                    <field name="COMPONENT_SELECTOR">PhoneTextConfirm</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="@H66Nyf5Y|lJQ-we_~R2">
+            <value name="IF0">
+              <block type="logic_compare" id="#[*0qr#=?}#x1Y8a4e3T">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="component_set_get" id="ro4nRfhreA3~IC2CQkCn">
+                    <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="PasswordTextBox1"></mutation>
+                    <field name="COMPONENT_SELECTOR">PasswordTextBox1</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="component_set_get" id=")P.qbRvT#bZkkRA=o.+W">
+                    <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="PasswordTextBox2"></mutation>
+                    <field name="COMPONENT_SELECTOR">PasswordTextBox2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="lexical_variable_set" id="+uko4{=GB:Bh*f8n.:|=">
+                <field name="VAR">global phone</field>
+                <value name="VALUE">
+                  <block type="component_set_get" id="I2L323$93X2g*S3Xt5--">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="phoneText"></mutation>
+                    <field name="COMPONENT_SELECTOR">phoneText</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="lexical_variable_set" id="6Gh=XDseZj)MZPxeqkW|">
+                    <field name="VAR">global password</field>
+                    <value name="VALUE">
+                      <block type="component_set_get" id=",8PTwJc.w14dU@xdv)FC">
+                        <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="PasswordTextBox1"></mutation>
+                        <field name="COMPONENT_SELECTOR">PasswordTextBox1</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="9~{=P0D9%ma405_+m:av">
+                        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
+                        <field name="COMPONENT_SELECTOR">LocalDB</field>
+                        <comment pinned="false" h="71" w="619">My emulation failed, probably because this doesn't create a unique tag. Each registration would have the same tag of "phone" which is not unique. Need a way to fix this. Probably use the number as the tag and store the password as the value.  I updated this and it now works.</comment>
+                        <value name="ARG0">
+                          <block type="lexical_variable_get" id="bZ`jI,6Q1IAH$wA?Fr.R">
+                            <field name="VAR">global phone</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="lexical_variable_get" id="1;4APi8bUE~tuNZP)N]#">
+                            <field name="VAR">global password</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <next>
+          <block type="component_set_get" id="G9Cr`z):NCa-ZOEWh!4|">
+            <mutation component_type="Texting" set_or_get="set" property_name="PhoneNumber" is_generic="false" instance_name="Texting1"></mutation>
+            <field name="COMPONENT_SELECTOR">Texting1</field>
+            <field name="PROP">PhoneNumber</field>
+            <value name="VALUE">
+              <block type="lexical_variable_get" id="}ll$Al,X%$@Y`{~*R:qj">
+                <field name="VAR">global phone</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_set_get" id="IY,-g;$jJKO,/{nlz@-h">
+                <mutation component_type="Texting" set_or_get="set" property_name="Message" is_generic="false" instance_name="Texting1"></mutation>
+                <field name="COMPONENT_SELECTOR">Texting1</field>
+                <field name="PROP">Message</field>
+                <value name="VALUE">
+                  <block type="text_join" id="W!9S^[7D{b2zm4PoV7j,">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="*5Di42:AgnYfiQhv8P(p">
+                        <field name="TEXT">Please enter verification code below into app:</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="lexical_variable_get" id="/gUCL9gYY;o@4Y54omzo">
+                        <field name="VAR">global randomNum</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="oM=On=0JZ^pA0K(t5MhU">
+                    <mutation component_type="Texting" method_name="SendMessage" is_generic="false" instance_name="Texting1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Texting1</field>
+                    <next>
+                      <block type="component_method" id="{kEa*|voRF9^UMmPGz_d">
+                        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
+                        <field name="COMPONENT_SELECTOR">LocalDB</field>
+                        <value name="ARG0">
+                          <block type="text" id="xgT*m%/VB%0Fkg{EQ2.:">
+                            <field name="TEXT">randomNum1</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="lexical_variable_get" id="W:GiVT2Z4E86*nqk_BDb">
+                            <field name="VAR">global randomNum</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_openAnotherScreen" id="jFVucQEP$Nxs+qO:UOsn">
+                            <value name="SCREEN">
+                              <block type="text" id="s~E?b~/mp~~Rs5AIp1|w">
+                                <field name="TEXT">emailConfirm</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="167" language-version="21"></yacodeblocks>
+</xml>

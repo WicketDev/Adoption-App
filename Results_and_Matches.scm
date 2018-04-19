@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["ai2.appinventor.mit.edu"],"YaVersion":"167","Source":"Form","Properties":{"$Name":"Results_and_Matches","$Type":"Form","$Version":"23","AppName":"ProjectThing","Scrollable":"True","Title":"Results_and_Matches","Uuid":"0","$Components":[{"$Name":"TextBox1","$Type":"TextBox","$Version":"5","Width":"-2","Hint":"Hint for TextBox1","Uuid":"-1928185898"},{"$Name":"Label1","$Type":"Label","$Version":"4","Width":"-2","Text":"Please enter search information ","TextAlignment":"1","Uuid":"-1479989559"},{"$Name":"Button1","$Type":"Button","$Version":"6","Width":"-2","Shape":"1","Text":"Show Matches","Uuid":"54081521"},{"$Name":"ListView1","$Type":"ListView","$Version":"5","Height":"-1070","Uuid":"-770216990"},{"$Name":"LocalDB","$Type":"TinyDB","$Version":"1","Uuid":"-748586115"}]}}
+|#
