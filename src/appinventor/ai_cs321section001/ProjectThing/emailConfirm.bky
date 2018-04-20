@@ -57,5 +57,18 @@
       </block>
     </statement>
   </block>
+  <block type="component_event" id="ykejx77A#!Uoyk3}ADJu" x="-592" y="-754">
+    <mutation component_type="Button" instance_name="Cancel" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Cancel</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="9[yl31b}IO7Cz0AtaCqr">
+        <value name="SCREEN">
+          <block type="text" id="LkD|:1l-we}*Qm}PhiOa">
+            <field name="TEXT">Registration</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
   <yacodeblocks ya-version="167" language-version="21"></yacodeblocks>
 </xml>

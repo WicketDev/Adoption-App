@@ -7,10 +7,19 @@
       </block>
     </value>
   </block>
-  <block type="component_event" id="hO9*_03Z,j~c~(R{x9g4" x="337" y="-648">
+  <block type="component_event" id="hO9*_03Z,j~c~(R{x9g4" x="148" y="-661">
     <mutation component_type="Button" instance_name="PWReset" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">PWReset</field>
     <comment pinned="false" h="80" w="160">Needs to be handled.</comment>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="}|QTN^Pze}%kbr0{K`bS">
+        <value name="SCREEN">
+          <block type="text" id="CW:bjD-F6?8nyXIb^|b[">
+            <field name="TEXT">Registration</field>
+          </block>
+        </value>
+      </block>
+    </statement>
   </block>
   <block type="component_event" id="wNg;s;b,FQp3J2a2qmo3" x="-153" y="-586">
     <mutation component_type="Button" instance_name="createButton" event_name="Click"></mutation>
@@ -24,6 +33,13 @@
           </block>
         </value>
       </block>
+    </statement>
+  </block>
+  <block type="component_event" id="Ld(]b#q`](w3~ZPFVuda" x="396" y="-534">
+    <mutation component_type="Button" instance_name="Exit" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Exit</field>
+    <statement name="DO">
+      <block type="controls_closeApplication" id="8[6B#5_)=09X;$9JMMvl"></block>
     </statement>
   </block>
   <block type="component_event" id="x}K+is=bj~~GGpk39LWU" x="-164" y="-433">
@@ -126,7 +142,7 @@
                             <comment pinned="false" h="80" w="160">Should pass the phone number to form page to add to entry.</comment>
                             <value name="SCREENNAME">
                               <block type="text" id="{b/*#@/S{=UsLM[]$E16">
-                                <field name="TEXT">FormPage</field>
+                                <field name="TEXT">ActionPage</field>
                               </block>
                             </value>
                             <value name="STARTVALUE">

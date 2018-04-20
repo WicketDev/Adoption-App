@@ -1,0 +1,42 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="9.hh@Igq]IQh3ugDRoFj" x="-535" y="-317">
+    <mutation component_type="Button" instance_name="Button1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button1</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreenWithStartValue" id="A(cAOvJc%4;XE9qHSl2B">
+        <value name="SCREENNAME">
+          <block type="text" id="#r:65VtH]mzqaF={~IrY">
+            <field name="TEXT">Result_and_Matches</field>
+          </block>
+        </value>
+        <value name="STARTVALUE">
+          <block type="controls_getStartValue" id="H71Cs#F{VbS0*wk*_;u*"></block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="8_F9Ud)EhXL1Yq;pAXuo" x="-540" y="-167">
+    <mutation component_type="Button" instance_name="Button2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button2</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreenWithStartValue" id="|8|*dt]6(C!Ih~-Xewe9">
+        <value name="SCREENNAME">
+          <block type="text" id="=C7_n;Xp[Ix@,RY+^Vw|">
+            <field name="TEXT">My_info</field>
+          </block>
+        </value>
+        <value name="STARTVALUE">
+          <block type="controls_getStartValue" id="@v*Evv}M51rBLx=Zm$nH"></block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="E(Jhj]j0lV8unThTcV7e" x="-541" y="-39">
+    <mutation component_type="Button" instance_name="Button3" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Button3</field>
+    <statement name="DO">
+      <block type="controls_closeApplication" id="!%Yk`J|/6^OHf5bCaZUu"></block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="167" language-version="21"></yacodeblocks>
+</xml>

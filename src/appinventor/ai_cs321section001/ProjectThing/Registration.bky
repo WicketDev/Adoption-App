@@ -40,7 +40,20 @@
       </block>
     </value>
   </block>
-  <block type="component_event" id="T%1+_l(.Fs{-/hR|DKj%" x="-611" y="-734">
+  <block type="component_event" id="lI7Ns;fWkc~+?H{91],;" x="-254" y="-771">
+    <mutation component_type="Button" instance_name="Cancel" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Cancel</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="O*kz0(}Q6dAgeYwUXKMl">
+        <value name="SCREEN">
+          <block type="text" id="oqD?CCEFmyjbde[)t^[s">
+            <field name="TEXT">Screen1</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="T%1+_l(.Fs{-/hR|DKj%" x="-508" y="-666">
     <mutation component_type="Button" instance_name="Submit" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Submit</field>
     <comment pinned="false" h="80" w="160">Checks that the phone number and password match, if so, adds to local DB using the phone number as the tag and storing the password as the value, then opens the email confirmation page.</comment>
