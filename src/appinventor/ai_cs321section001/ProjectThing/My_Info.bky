@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="global_declaration" id="~f8]Kkq$:XC_IGlE6CZ=" x="-231" y="-349">
+  <block type="global_declaration" id="~f8]Kkq$:XC_IGlE6CZ=" x="0" y="0">
     <field name="NAME">listyitem</field>
     <value name="VALUE">
       <block type="lists_create_with" id="Nva:=^2+Ad)1~s[VTu3V">
@@ -7,7 +7,7 @@
       </block>
     </value>
   </block>
-  <block type="component_event" id="V)(W[0Hv+*Lox?|+W_1W" x="-643" y="-282">
+  <block type="component_event" id="V)(W[0Hv+*Lox?|+W_1W" x="0" y="53">
     <mutation component_type="Form" instance_name="My_Info" event_name="Initialize"></mutation>
     <field name="COMPONENT_SELECTOR">My_Info</field>
     <statement name="DO">
@@ -198,7 +198,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="z1JDId[-C%;IXMV!/OCB" x="-643" y="294">
+  <block type="component_event" id="z1JDId[-C%;IXMV!/OCB" x="20" y="624">
     <mutation component_type="Button" instance_name="Button1" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Button1</field>
     <statement name="DO">
@@ -384,7 +384,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="g,)iEtqHfAno]4om$hP3" x="-647" y="1076">
+  <block type="component_event" id="g,)iEtqHfAno]4om$hP3" x="0" y="1377">
     <mutation component_type="Button" instance_name="Button2" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Button2</field>
     <statement name="DO">

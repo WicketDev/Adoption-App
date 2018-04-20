@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="component_event" id="(.;!O;tkN4aAFf)L-47W" x="-595" y="-996">
+  <block type="component_event" id="(.;!O;tkN4aAFf)L-47W" x="0" y="0">
     <mutation component_type="Button" instance_name="Submit" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Submit</field>
     <comment pinned="false" h="80" w="160">This screen allows user to enter a random number that was texted to the phone number provided. If they match, it sends user to login page, if not it notifies user of error.</comment>
@@ -57,14 +57,14 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="ykejx77A#!Uoyk3}ADJu" x="-592" y="-754">
+  <block type="component_event" id="ykejx77A#!Uoyk3}ADJu" x="0" y="256">
     <mutation component_type="Button" instance_name="Cancel" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Cancel</field>
     <statement name="DO">
       <block type="controls_openAnotherScreen" id="9[yl31b}IO7Cz0AtaCqr">
         <value name="SCREEN">
           <block type="text" id="LkD|:1l-we}*Qm}PhiOa">
-            <field name="TEXT">Registration</field>
+            <field name="TEXT">Form</field>
           </block>
         </value>
       </block>

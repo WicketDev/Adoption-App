@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="global_declaration" id="~f8]Kkq$:XC_IGlE6CZ=" x="-180" y="-297">
+  <block type="global_declaration" id="~f8]Kkq$:XC_IGlE6CZ=" x="0" y="0">
     <field name="NAME">listyitem</field>
     <value name="VALUE">
       <block type="lists_create_with" id="Nva:=^2+Ad)1~s[VTu3V">
@@ -7,9 +7,9 @@
       </block>
     </value>
   </block>
-  <block type="component_event" id="8]sno83!2LUj*b.7%/^l" x="-449" y="-274">
-    <mutation component_type="Button" instance_name="Button1" event_name="Click"></mutation>
-    <field name="COMPONENT_SELECTOR">Button1</field>
+  <block type="component_event" id="8]sno83!2LUj*b.7%/^l" x="0" y="53">
+    <mutation component_type="Button" instance_name="ShowMatch" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ShowMatch</field>
     <statement name="DO">
       <block type="controls_forEach" id="9nP0$pqsCPksm|k}-lAm">
         <field name="VAR">item</field>
@@ -72,8 +72,8 @@
                         </value>
                         <value name="B">
                           <block type="component_set_get" id="W,ENMV8Xt@R4OhK?J1|n">
-                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="TextBox1"></mutation>
-                            <field name="COMPONENT_SELECTOR">TextBox1</field>
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="SearchData"></mutation>
+                            <field name="COMPONENT_SELECTOR">SearchData</field>
                             <field name="PROP">Text</field>
                           </block>
                         </value>
@@ -110,7 +110,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="c.xvyT;dfNtpKI}G;[Zf" x="-174" y="157">
+  <block type="component_event" id="c.xvyT;dfNtpKI}G;[Zf" x="0" y="440">
     <mutation component_type="ListView" instance_name="ListView1" event_name="AfterPicking"></mutation>
     <field name="COMPONENT_SELECTOR">ListView1</field>
     <statement name="DO">
@@ -137,22 +137,22 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="0wM((X,SGoXr$4q=W6]w" x="-194" y="347">
-    <mutation component_type="Button" instance_name="Button2" event_name="Click"></mutation>
-    <field name="COMPONENT_SELECTOR">Button2</field>
+  <block type="component_event" id="0wM((X,SGoXr$4q=W6]w" x="0" y="583">
+    <mutation component_type="Button" instance_name="ActionPage" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ActionPage</field>
     <statement name="DO">
       <block type="controls_openAnotherScreen" id="U,1LRBP5NM~Yia~aHoLR">
         <value name="SCREEN">
           <block type="text" id="jzdp,};z1q;$n+UAih+p">
-            <field name="TEXT">FormPage</field>
+            <field name="TEXT">ActionPage</field>
           </block>
         </value>
       </block>
     </statement>
   </block>
-  <block type="component_event" id="%mWtwPqrwZ:+eXd0eN=9" x="-193" y="437">
-    <mutation component_type="Button" instance_name="Button3" event_name="Click"></mutation>
-    <field name="COMPONENT_SELECTOR">Button3</field>
+  <block type="component_event" id="%mWtwPqrwZ:+eXd0eN=9" x="0" y="673">
+    <mutation component_type="Button" instance_name="My_Info" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">My_Info</field>
     <statement name="DO">
       <block type="controls_openAnotherScreen" id="D*dw{e?zH3w*{}5g{%zF">
         <value name="SCREEN">
