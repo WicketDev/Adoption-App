@@ -2,8 +2,8 @@
   <block type="global_declaration" id="vg{P|jtdp61VcZ}Ob$Ge" x="0" y="64">
     <field name="NAME">entry</field>
     <value name="VALUE">
-      <block type="lists_create_with" id="9d#4O]@n,d/}-C|T/JP(">
-        <mutation items="0"></mutation>
+      <block type="text" id="vH}r]t9(4p3{KV9~GDi9">
+        <field name="TEXT"></field>
       </block>
     </value>
   </block>

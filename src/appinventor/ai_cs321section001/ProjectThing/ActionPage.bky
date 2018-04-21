@@ -6,7 +6,7 @@
       <block type="controls_openAnotherScreenWithStartValue" id="A(cAOvJc%4;XE9qHSl2B">
         <value name="SCREENNAME">
           <block type="text" id="#r:65VtH]mzqaF={~IrY">
-            <field name="TEXT">Result_and_Matches</field>
+            <field name="TEXT">Results_and_Matches</field>
           </block>
         </value>
         <value name="STARTVALUE">
@@ -22,7 +22,7 @@
       <block type="controls_openAnotherScreenWithStartValue" id="|8|*dt]6(C!Ih~-Xewe9">
         <value name="SCREENNAME">
           <block type="text" id="=C7_n;Xp[Ix@,RY+^Vw|">
-            <field name="TEXT">My_info</field>
+            <field name="TEXT">My_Info</field>
           </block>
         </value>
         <value name="STARTVALUE">

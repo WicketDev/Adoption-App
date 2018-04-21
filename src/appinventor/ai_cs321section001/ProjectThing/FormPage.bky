@@ -1,6 +1,55 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="global_declaration" id="@V6LF+{$4Vhe*/LemmH9" x="-2" y="-62">
+  <block type="global_declaration" id="eS:%hq[uRU|5x{TJ,G9~" x="0" y="0">
+    <field name="NAME">childFname</field>
+    <value name="VALUE">
+      <block type="text" id="co8uv8@S(P8icJe(MW$^">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id=":=vO!|:uXquu92~Nq9j0" x="0" y="53">
+    <field name="NAME">childLname</field>
+    <value name="VALUE">
+      <block type="text" id="#}W@tvaq,//M9/**~KA7">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="M=l{6xF;.nf%VvZ^d*c." x="0" y="106">
+    <field name="NAME">momFname</field>
+    <value name="VALUE">
+      <block type="text" id="m5lzDUBOUMX1b9M*]8cB">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="O.W!N._+t$$HPXigY:%q" x="0" y="159">
+    <field name="NAME">momLname</field>
+    <value name="VALUE">
+      <block type="text" id="?ATDBOuT:sLaGH;`FFkm">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="CxAov^.l4]c.n;oo)bu/" x="0" y="212">
+    <field name="NAME">city</field>
+    <value name="VALUE">
+      <block type="text" id="aV!WosT8Zp^YoR/(cGG4">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="kUjoF`D#98mr6WW]?H@+" x="0" y="265">
+    <field name="NAME">state</field>
+    <value name="VALUE">
+      <block type="text" id="j~vVNRx!QbGa1_CJ~^{o">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="@V6LF+{$4Vhe*/LemmH9" x="0" y="318">
     <field name="NAME">randomNum</field>
+    <comment pinned="false" h="80" w="160">Generates random number to be sent to user for email verification.</comment>
     <value name="VALUE">
       <block type="math_random_int" id="2`Uog~lXVZw$}PzDP%Sh">
         <value name="FROM">
@@ -16,15 +65,15 @@
       </block>
     </value>
   </block>
-  <block type="global_declaration" id="SK,O[F=aSv`0a7xQ*/is" x="0" y="0">
+  <block type="global_declaration" id="SK,O[F=aSv`0a7xQ*/is" x="0" y="382">
     <field name="NAME">entry</field>
     <value name="VALUE">
-      <block type="lists_create_with" id="j.oMcf2O9feOC9.YZ3N4">
-        <mutation items="0"></mutation>
+      <block type="text" id="J=n!nGqqwu|[Rgw8urSX">
+        <field name="TEXT"></field>
       </block>
     </value>
   </block>
-  <block type="component_event" id="EVdSqNGo.SyaCeDON]*Q" x="0" y="53">
+  <block type="component_event" id="EVdSqNGo.SyaCeDON]*Q" x="0" y="435">
     <mutation component_type="ListPicker" instance_name="userIdentity" event_name="AfterPicking"></mutation>
     <field name="COMPONENT_SELECTOR">userIdentity</field>
     <comment pinned="false" h="80" w="160">displays selection on button.</comment>
@@ -43,7 +92,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="R}+`nsGCbF.PZ1261WX`" x="0" y="145">
+  <block type="component_event" id="R}+`nsGCbF.PZ1261WX`" x="0" y="527">
     <mutation component_type="ListPicker" instance_name="Gender" event_name="AfterPicking"></mutation>
     <field name="COMPONENT_SELECTOR">Gender</field>
     <comment pinned="false" h="80" w="160">Displays selection on button.</comment>
@@ -62,7 +111,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="[f;W/14Wi2;xC0}b.}%#" x="0" y="237">
+  <block type="component_event" id="[f;W/14Wi2;xC0}b.}%#" x="0" y="619">
     <mutation component_type="ListPicker" instance_name="StateOfBirth" event_name="AfterPicking"></mutation>
     <field name="COMPONENT_SELECTOR">StateOfBirth</field>
     <comment pinned="false" h="80" w="160">Displays selection on button.</comment>
@@ -81,7 +130,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="-/{{Zu@.P1XNbDuYNl(L" x="0" y="329">
+  <block type="component_event" id="-/{{Zu@.P1XNbDuYNl(L" x="0" y="711">
     <mutation component_type="DatePicker" instance_name="DOB" event_name="AfterDateSet"></mutation>
     <field name="COMPONENT_SELECTOR">DOB</field>
     <comment pinned="false" h="80" w="160">Displays selection on button.</comment>
@@ -95,9 +144,9 @@
             <mutation items="5"></mutation>
             <value name="ADD0">
               <block type="component_set_get" id="4s8G-(NX{)W6WYWQ!})_">
-                <mutation component_type="DatePicker" set_or_get="get" property_name="MonthInText" is_generic="false" instance_name="DOB"></mutation>
+                <mutation component_type="DatePicker" set_or_get="get" property_name="Month" is_generic="false" instance_name="DOB"></mutation>
                 <field name="COMPONENT_SELECTOR">DOB</field>
-                <field name="PROP">MonthInText</field>
+                <field name="PROP">Month</field>
               </block>
             </value>
             <value name="ADD1">
@@ -129,13 +178,13 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="/#Fnol#DJbylynJOqM4D" x="0" y="525">
+  <block type="component_event" id="/#Fnol#DJbylynJOqM4D" x="0" y="907">
     <mutation component_type="Button" instance_name="SubmitButton" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">SubmitButton</field>
     <comment pinned="false" h="91" w="1439">When user submits info, user identity, dob, and gender must be selected. If other fields are left blank, it takes the empty string or null value and inputs that into the DB list. The DB list format is:
-tag(User++)
-[identity of user, gender of child, dob, child's first name, child's last name, mother's first name, mother's last name, city of birth, state of birth, phone number] (should we add phone number here? If so, need a way to pull it from the login page to avoid making user reenter)
-Upon submit, these elements, in this order, are added to a list and then the list is saved into the database.
+tag: (phone number):
+value: [identity of user, gender of child, dob, child's first name, child's last name, mother's first name, mother's last name, city of birth, state of birth, phone number, password]
+Upon submit, these elements, in this order, are added to a list and then the list is saved into the database. Then, a text is sent to user for verification and the screen changes to the email verification page.
     </comment>
     <statement name="DO">
       <block type="controls_if" id="F`DJ2OOpHE1J(#BlEtok">
@@ -152,7 +201,7 @@ Upon submit, these elements, in this order, are added to a list and then the lis
             </value>
             <value name="B">
               <block type="text" id="lwzFz4ySwo7OgFx`3f6i">
-                <field name="TEXT"></field>
+                <field name="TEXT">You are...</field>
               </block>
             </value>
           </block>
@@ -204,250 +253,406 @@ Upon submit, these elements, in this order, are added to a list and then the lis
                       <block type="logic_compare" id="}XT`K5g=2{gJ]@%_tZZ[">
                         <field name="OP">EQ</field>
                         <value name="A">
-                          <block type="component_set_get" id="MQK?EvD5+?XQbrg$UI7G">
-                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="password"></mutation>
-                            <field name="COMPONENT_SELECTOR">password</field>
+                          <block type="component_set_get" id="]uN}W+jUD9:[iz2x{OMd">
+                            <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="PasswordTextBox1"></mutation>
+                            <field name="COMPONENT_SELECTOR">PasswordTextBox1</field>
                             <field name="PROP">Text</field>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="component_set_get" id="./Vw-xA[HoPQ5j4zx2}-">
-                            <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Pw2"></mutation>
-                            <field name="COMPONENT_SELECTOR">Pw2</field>
+                          <block type="component_set_get" id="_)]GHR{6x:7J5C1qW5.$">
+                            <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="PasswordTextBox2"></mutation>
+                            <field name="COMPONENT_SELECTOR">PasswordTextBox2</field>
                             <field name="PROP">Text</field>
                           </block>
                         </value>
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="lexical_variable_set" id="/U3^m3W;c@,9de`hT5#S">
-                        <field name="VAR">global entry</field>
-                        <comment pinned="false" h="80" w="160">I think we should either make this a local variable or we need to clear the form after submit is entered. When I was playing with it, it would continue adding the items in over and over.</comment>
-                        <value name="VALUE">
-                          <block type="lists_create_with" id=":2z%BN-M##Q=f3Jx@!z5">
-                            <mutation items="12"></mutation>
-                            <value name="ADD0">
-                              <block type="lexical_variable_get" id=".^nMU@2R+B:1:H7YPYL8">
-                                <field name="VAR">global entry</field>
-                              </block>
-                            </value>
-                            <value name="ADD1">
-                              <block type="component_set_get" id="M_Pzd_R/TbEQA^WMCBfg">
-                                <mutation component_type="ListPicker" set_or_get="get" property_name="Text" is_generic="false" instance_name="userIdentity"></mutation>
-                                <field name="COMPONENT_SELECTOR">userIdentity</field>
+                      <block type="controls_if" id="ZgXw|DxE)yPSm[SHjT#~">
+                        <value name="IF0">
+                          <block type="logic_compare" id="vbk`ne.p[7v6,xG{GlA}">
+                            <field name="OP">NEQ</field>
+                            <value name="A">
+                              <block type="component_set_get" id="5])q/V/l1THj(?-B]Nq-">
+                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="childFName"></mutation>
+                                <field name="COMPONENT_SELECTOR">childFName</field>
                                 <field name="PROP">Text</field>
                               </block>
                             </value>
-                            <value name="ADD2">
-                              <block type="component_set_get" id="vWbA`7CxTEaDmqEnrTw]">
-                                <mutation component_type="ListPicker" set_or_get="get" property_name="Text" is_generic="false" instance_name="Gender"></mutation>
-                                <field name="COMPONENT_SELECTOR">Gender</field>
+                            <value name="B">
+                              <block type="text" id="bJ$j)c%.4DLrrz~?V%$-">
+                                <field name="TEXT"></field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="lexical_variable_set" id="d1OPaaH#9v%]+ilfYirx">
+                            <field name="VAR">global childFname</field>
+                            <value name="VALUE">
+                              <block type="component_set_get" id="}hz?aIIdoaWc,e_YI|o*">
+                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="childFName"></mutation>
+                                <field name="COMPONENT_SELECTOR">childFName</field>
                                 <field name="PROP">Text</field>
                               </block>
                             </value>
-                            <value name="ADD3">
-                              <block type="component_set_get" id=")1^l;Oy.)G(yKersV3+3">
-                                <mutation component_type="DatePicker" set_or_get="get" property_name="Text" is_generic="false" instance_name="DOB"></mutation>
-                                <field name="COMPONENT_SELECTOR">DOB</field>
-                                <field name="PROP">Text</field>
-                              </block>
-                            </value>
-                            <value name="ADD4">
-                              <block type="text_changeCase" id="KJXQ1}kLjQg1Dl2]joz~">
-                                <field name="OP">DOWNCASE</field>
-                                <value name="TEXT">
-                                  <block type="component_set_get" id="}hz?aIIdoaWc,e_YI|o*">
-                                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="childFName"></mutation>
-                                    <field name="COMPONENT_SELECTOR">childFName</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="1IJ(z5T=)!l0t^*`sXHU">
+                            <value name="IF0">
+                              <block type="logic_compare" id="X%i_,[[eno~**v)u4yj+">
+                                <field name="OP">NEQ</field>
+                                <value name="A">
+                                  <block type="component_set_get" id="BY)uO4#)Zn_WG=xkjI5(">
+                                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="childLName"></mutation>
+                                    <field name="COMPONENT_SELECTOR">childLName</field>
                                     <field name="PROP">Text</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="text" id="X~QCntcEjx0#owyL^7qU">
+                                    <field name="TEXT"></field>
                                   </block>
                                 </value>
                               </block>
                             </value>
-                            <value name="ADD5">
-                              <block type="text_changeCase" id="d|tG|tScCyZ%1(%_j)d}">
-                                <field name="OP">DOWNCASE</field>
-                                <value name="TEXT">
-                                  <block type="component_set_get" id="y%KjjtqFNN`2w!/mER,X">
+                            <statement name="DO0">
+                              <block type="lexical_variable_set" id="/+rGk?!NY@ERH|aUd_H1">
+                                <field name="VAR">global childLname</field>
+                                <value name="VALUE">
+                                  <block type="component_set_get" id="|tNX%MpUR3%wvF52QJ]H">
                                     <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="childLName"></mutation>
                                     <field name="COMPONENT_SELECTOR">childLName</field>
                                     <field name="PROP">Text</field>
                                   </block>
                                 </value>
                               </block>
-                            </value>
-                            <value name="ADD6">
-                              <block type="text_changeCase" id="*|iG[Z922.VjKrjIfNA6">
-                                <field name="OP">DOWNCASE</field>
-                                <value name="TEXT">
-                                  <block type="component_set_get" id="*Jgr$h#q-HWe59_Skg3^">
-                                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="motherFName"></mutation>
-                                    <field name="COMPONENT_SELECTOR">motherFName</field>
-                                    <field name="PROP">Text</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="ADD7">
-                              <block type="text_changeCase" id="b.i1_J!;=S,{+e^`nB;F">
-                                <field name="OP">DOWNCASE</field>
-                                <value name="TEXT">
-                                  <block type="component_set_get" id="CxseaK)HRUnWlebCX[8^">
-                                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="motherLName"></mutation>
-                                    <field name="COMPONENT_SELECTOR">motherLName</field>
-                                    <field name="PROP">Text</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="ADD8">
-                              <block type="text_changeCase" id="K{i{gj;nmXGz`YgM3n9}">
-                                <field name="OP">DOWNCASE</field>
-                                <value name="TEXT">
-                                  <block type="component_set_get" id="NP|^^]@xCYPUu(H)AyxX">
-                                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="birthCity"></mutation>
-                                    <field name="COMPONENT_SELECTOR">birthCity</field>
-                                    <field name="PROP">Text</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="ADD9">
-                              <block type="component_set_get" id="t_^2@A[hCl$kt/M=ORy-">
-                                <mutation component_type="ListPicker" set_or_get="get" property_name="Text" is_generic="false" instance_name="StateOfBirth"></mutation>
-                                <field name="COMPONENT_SELECTOR">StateOfBirth</field>
-                                <field name="PROP">Text</field>
-                              </block>
-                            </value>
-                            <value name="ADD10">
-                              <block type="component_set_get" id="2(Er|SM!8!Li7`wQZb$V">
-                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_number"></mutation>
-                                <field name="COMPONENT_SELECTOR">Phone_number</field>
-                                <field name="PROP">Text</field>
-                              </block>
-                            </value>
-                            <value name="ADD11">
-                              <block type="component_set_get" id="hA5$S00WJV3+Gm*Ecm5W">
-                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="password"></mutation>
-                                <field name="COMPONENT_SELECTOR">password</field>
-                                <field name="PROP">Text</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="component_method" id="pz6$kU3WKf9P*ET[9I$w">
-                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
-                            <field name="COMPONENT_SELECTOR">LocalDB</field>
-                            <comment pinned="false" h="80" w="160">This should create a unique key for user info by increment the counter variable. Ex. "child1"</comment>
-                            <value name="ARG0">
-                              <block type="component_set_get" id="RVOT)nZv}behr_{.V7;@">
-                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_number"></mutation>
-                                <field name="COMPONENT_SELECTOR">Phone_number</field>
-                                <field name="PROP">Text</field>
-                              </block>
-                            </value>
-                            <value name="ARG1">
-                              <block type="lexical_variable_get" id="LV`@3hP-fA(xljRk$*:g">
-                                <field name="VAR">global entry</field>
-                              </block>
-                            </value>
+                            </statement>
                             <next>
-                              <block type="component_method" id="UL@u/c[5Ej[YhO$xleo9">
-                                <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
-                                <field name="COMPONENT_SELECTOR">Notifier1</field>
-                                <value name="ARG0">
-                                  <block type="component_method" id="(PJG.^n#5s8~W%S1w_uq">
-                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
-                                    <field name="COMPONENT_SELECTOR">LocalDB</field>
-                                    <value name="ARG0">
-                                      <block type="component_set_get" id="{t/*~hDYeP0r{_kSs3/q">
-                                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_number"></mutation>
-                                        <field name="COMPONENT_SELECTOR">Phone_number</field>
+                              <block type="controls_if" id="6$(pGA!_ftSbWXDShZ4i">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="kW8_PUIg28-to6^tM@:J">
+                                    <field name="OP">NEQ</field>
+                                    <value name="A">
+                                      <block type="component_set_get" id="vN,Tde8}+*qAL5VYX9/E">
+                                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="motherFName"></mutation>
+                                        <field name="COMPONENT_SELECTOR">motherFName</field>
                                         <field name="PROP">Text</field>
                                       </block>
                                     </value>
-                                    <value name="ARG1">
-                                      <block type="text" id="o-3K`[7A$h;jY_W:)K*b">
-                                        <field name="TEXT">Not found.</field>
+                                    <value name="B">
+                                      <block type="text" id="6xpi@DWb-{M9t4BD-oyK">
+                                        <field name="TEXT"></field>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
-                                <value name="ARG1">
-                                  <block type="text" id="Zz$_XDRx;mXeqN*w+8}d">
-                                    <field name="TEXT">Success</field>
-                                  </block>
-                                </value>
-                                <value name="ARG2">
-                                  <block type="text" id="{WBkMk%GyS[Lm:cwLkcS">
-                                    <field name="TEXT">OK</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="component_set_get" id="G9Cr`z):NCa-ZOEWh!4|">
-                                    <mutation component_type="Texting" set_or_get="set" property_name="PhoneNumber" is_generic="false" instance_name="Texting1"></mutation>
-                                    <field name="COMPONENT_SELECTOR">Texting1</field>
-                                    <field name="PROP">PhoneNumber</field>
+                                <statement name="DO0">
+                                  <block type="lexical_variable_set" id="@E(t#R(@Ei%@tPK?A#[L">
+                                    <field name="VAR">global momFname</field>
                                     <value name="VALUE">
-                                      <block type="component_set_get" id="XA~mW83=2cDxzLuw[#/?">
-                                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_number"></mutation>
-                                        <field name="COMPONENT_SELECTOR">Phone_number</field>
+                                      <block type="component_set_get" id="nqWnzb)oUiT|X(vp)7d!">
+                                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="motherFName"></mutation>
+                                        <field name="COMPONENT_SELECTOR">motherFName</field>
                                         <field name="PROP">Text</field>
                                       </block>
                                     </value>
-                                    <next>
-                                      <block type="component_set_get" id="IY,-g;$jJKO,/{nlz@-h">
-                                        <mutation component_type="Texting" set_or_get="set" property_name="Message" is_generic="false" instance_name="Texting1"></mutation>
-                                        <field name="COMPONENT_SELECTOR">Texting1</field>
-                                        <field name="PROP">Message</field>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="u+_zQ?ql:saAV6#iYsb]">
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="wk/kHfr_r-sdc5O1S;7m">
+                                        <field name="OP">NEQ</field>
+                                        <value name="A">
+                                          <block type="component_set_get" id="Ky2Hlmh8]8B1,iU%-=sn">
+                                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="motherLName"></mutation>
+                                            <field name="COMPONENT_SELECTOR">motherLName</field>
+                                            <field name="PROP">Text</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="text" id="7TwN^kE@#5;{Fk%||Pd)">
+                                            <field name="TEXT"></field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="lexical_variable_set" id="c)DQ3k~J5u?6lTIrw[UG">
+                                        <field name="VAR">global momLname</field>
                                         <value name="VALUE">
-                                          <block type="text_join" id="W!9S^[7D{b2zm4PoV7j,">
-                                            <mutation items="2"></mutation>
-                                            <value name="ADD0">
-                                              <block type="text" id="*5Di42:AgnYfiQhv8P(p">
-                                                <field name="TEXT">Please enter verification code below into app:</field>
+                                          <block type="component_set_get" id="C%lD?jYI}.S?FXz_7oJ[">
+                                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="motherLName"></mutation>
+                                            <field name="COMPONENT_SELECTOR">motherLName</field>
+                                            <field name="PROP">Text</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="controls_if" id=".-6+~hY8uGh+blIsn*P5">
+                                        <value name="IF0">
+                                          <block type="logic_compare" id="e!lU:c+k`)BU.XBSn9bV">
+                                            <field name="OP">NEQ</field>
+                                            <value name="A">
+                                              <block type="component_set_get" id="Twl%Rs3gO}n,%Wc!7(8F">
+                                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="birthCity"></mutation>
+                                                <field name="COMPONENT_SELECTOR">birthCity</field>
+                                                <field name="PROP">Text</field>
                                               </block>
                                             </value>
-                                            <value name="ADD1">
-                                              <block type="lexical_variable_get" id="/gUCL9gYY;o@4Y54omzo">
-                                                <field name="VAR">global randomNum</field>
+                                            <value name="B">
+                                              <block type="text" id=")-BznAITWC6tc^PjRa)k">
+                                                <field name="TEXT"></field>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
+                                        <statement name="DO0">
+                                          <block type="lexical_variable_set" id="WN}C3^v;d1L[3qY,y(eQ">
+                                            <field name="VAR">global city</field>
+                                            <value name="VALUE">
+                                              <block type="component_set_get" id="qx:j{DnBE:64?`nU{6Bp">
+                                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="birthCity"></mutation>
+                                                <field name="COMPONENT_SELECTOR">birthCity</field>
+                                                <field name="PROP">Text</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </statement>
                                         <next>
-                                          <block type="component_method" id="oM=On=0JZ^pA0K(t5MhU">
-                                            <mutation component_type="Texting" method_name="SendMessage" is_generic="false" instance_name="Texting1"></mutation>
-                                            <field name="COMPONENT_SELECTOR">Texting1</field>
+                                          <block type="controls_if" id="=OPaAt)V$LEkH,A#!?lg">
+                                            <value name="IF0">
+                                              <block type="logic_compare" id="$ui0q[0[/-)aTF;nt;[D">
+                                                <field name="OP">NEQ</field>
+                                                <value name="A">
+                                                  <block type="component_set_get" id="OtYGk_;/3q.w]shC%Zpp">
+                                                    <mutation component_type="ListPicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="StateOfBirth"></mutation>
+                                                    <field name="COMPONENT_SELECTOR">StateOfBirth</field>
+                                                    <field name="PROP">Selection</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="text" id="Z|e~M.=%DOTZ]rj^S*W+">
+                                                    <field name="TEXT"></field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="lexical_variable_set" id="H2P4nw~reH*+`4SW]1:*">
+                                                <field name="VAR">global state</field>
+                                                <value name="VALUE">
+                                                  <block type="component_set_get" id="t_^2@A[hCl$kt/M=ORy-">
+                                                    <mutation component_type="ListPicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="StateOfBirth"></mutation>
+                                                    <field name="COMPONENT_SELECTOR">StateOfBirth</field>
+                                                    <field name="PROP">Selection</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </statement>
                                             <next>
-                                              <block type="component_method" id="{kEa*|voRF9^UMmPGz_d">
-                                                <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
-                                                <field name="COMPONENT_SELECTOR">LocalDB</field>
-                                                <value name="ARG0">
-                                                  <block type="text" id="xgT*m%/VB%0Fkg{EQ2.:">
-                                                    <field name="TEXT">randomNum1</field>
-                                                  </block>
-                                                </value>
-                                                <value name="ARG1">
-                                                  <block type="lexical_variable_get" id="W:GiVT2Z4E86*nqk_BDb">
-                                                    <field name="VAR">global randomNum</field>
-                                                  </block>
-                                                </value>
-                                                <next>
-                                                  <block type="controls_openAnotherScreenWithStartValue" id="Au}1T})@@iiz3tg8b)sc">
-                                                    <value name="SCREENNAME">
-                                                      <block type="text" id="f%A^{@ddvTLN{e,GPIY_">
-                                                        <field name="TEXT">emailConfirm</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="STARTVALUE">
-                                                      <block type="component_set_get" id="}lX%;8Iy;Pd,5!d^!Q-P">
-                                                        <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_number"></mutation>
-                                                        <field name="COMPONENT_SELECTOR">Phone_number</field>
+                                              <block type="lexical_variable_set" id="/U3^m3W;c@,9de`hT5#S">
+                                                <field name="VAR">global entry</field>
+                                                <comment pinned="false" h="80" w="160">I think we should either make this a local variable or we need to clear the form after submit is entered. When I was playing with it, it would continue adding the items in over and over.</comment>
+                                                <value name="VALUE">
+                                                  <block type="lists_create_with" id=":2z%BN-M##Q=f3Jx@!z5">
+                                                    <mutation items="11"></mutation>
+                                                    <value name="ADD0">
+                                                      <block type="component_set_get" id="M_Pzd_R/TbEQA^WMCBfg">
+                                                        <mutation component_type="ListPicker" set_or_get="get" property_name="Text" is_generic="false" instance_name="userIdentity"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">userIdentity</field>
                                                         <field name="PROP">Text</field>
                                                       </block>
                                                     </value>
+                                                    <value name="ADD1">
+                                                      <block type="component_set_get" id="vWbA`7CxTEaDmqEnrTw]">
+                                                        <mutation component_type="ListPicker" set_or_get="get" property_name="Text" is_generic="false" instance_name="Gender"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">Gender</field>
+                                                        <field name="PROP">Text</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD2">
+                                                      <block type="component_set_get" id=")1^l;Oy.)G(yKersV3+3">
+                                                        <mutation component_type="DatePicker" set_or_get="get" property_name="Text" is_generic="false" instance_name="DOB"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">DOB</field>
+                                                        <field name="PROP">Text</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD3">
+                                                      <block type="lexical_variable_get" id="cK?wQJn}6[YTj[$_U,?{">
+                                                        <field name="VAR">global childFname</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD4">
+                                                      <block type="lexical_variable_get" id="*qY%F:byF6hO+1A#C.8d">
+                                                        <field name="VAR">global childLname</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD5">
+                                                      <block type="lexical_variable_get" id="}}b`~e7Ac=xYA(39w`|n">
+                                                        <field name="VAR">global momFname</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD6">
+                                                      <block type="lexical_variable_get" id="w@FBU8m]iEFBYn}b,GSQ">
+                                                        <field name="VAR">global momLname</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD7">
+                                                      <block type="lexical_variable_get" id="O@wDxl{CG3nw;:A6yZ4_">
+                                                        <field name="VAR">global city</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD8">
+                                                      <block type="lexical_variable_get" id="CkHcy@o*cv]E8=WM(K:w">
+                                                        <field name="VAR">global state</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD9">
+                                                      <block type="component_set_get" id=".XU{OAM/i*1MZy`TNKMS">
+                                                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_Number"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">Phone_Number</field>
+                                                        <field name="PROP">Text</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD10">
+                                                      <block type="component_set_get" id=")A8%N%X`aC(!O[rMQ$u}">
+                                                        <mutation component_type="PasswordTextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="PasswordTextBox1"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">PasswordTextBox1</field>
+                                                        <field name="PROP">Text</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="component_method" id="pz6$kU3WKf9P*ET[9I$w">
+                                                    <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                    <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                    <comment pinned="false" h="80" w="160">This should create a unique key for user info by increment the counter variable. Ex. "child1"</comment>
+                                                    <value name="ARG0">
+                                                      <block type="component_set_get" id="]@)GmiHw9OIPZ_b=v{U`">
+                                                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_Number"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">Phone_Number</field>
+                                                        <field name="PROP">Text</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ARG1">
+                                                      <block type="lexical_variable_get" id="LV`@3hP-fA(xljRk$*:g">
+                                                        <field name="VAR">global entry</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="component_method" id="UL@u/c[5Ej[YhO$xleo9">
+                                                        <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                                                        <field name="COMPONENT_SELECTOR">Notifier1</field>
+                                                        <value name="ARG0">
+                                                          <block type="component_method" id="(PJG.^n#5s8~W%S1w_uq">
+                                                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                            <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                            <value name="ARG0">
+                                                              <block type="component_set_get" id="S-nYw/F:d_9y^J*vp7C:">
+                                                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_Number"></mutation>
+                                                                <field name="COMPONENT_SELECTOR">Phone_Number</field>
+                                                                <field name="PROP">Text</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ARG1">
+                                                              <block type="text" id="o-3K`[7A$h;jY_W:)K*b">
+                                                                <field name="TEXT">Not found.</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ARG1">
+                                                          <block type="text" id="Zz$_XDRx;mXeqN*w+8}d">
+                                                            <field name="TEXT">Confirmation</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="ARG2">
+                                                          <block type="text" id="{WBkMk%GyS[Lm:cwLkcS">
+                                                            <field name="TEXT">OK</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="component_set_get" id="G9Cr`z):NCa-ZOEWh!4|">
+                                                            <mutation component_type="Texting" set_or_get="set" property_name="PhoneNumber" is_generic="false" instance_name="Texting1"></mutation>
+                                                            <field name="COMPONENT_SELECTOR">Texting1</field>
+                                                            <field name="PROP">PhoneNumber</field>
+                                                            <value name="VALUE">
+                                                              <block type="component_set_get" id="V9vHq~s0vqi.AD:IEF@,">
+                                                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_Number"></mutation>
+                                                                <field name="COMPONENT_SELECTOR">Phone_Number</field>
+                                                                <field name="PROP">Text</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="component_set_get" id="IY,-g;$jJKO,/{nlz@-h">
+                                                                <mutation component_type="Texting" set_or_get="set" property_name="Message" is_generic="false" instance_name="Texting1"></mutation>
+                                                                <field name="COMPONENT_SELECTOR">Texting1</field>
+                                                                <field name="PROP">Message</field>
+                                                                <value name="VALUE">
+                                                                  <block type="text_join" id="W!9S^[7D{b2zm4PoV7j,">
+                                                                    <mutation items="2"></mutation>
+                                                                    <value name="ADD0">
+                                                                      <block type="text" id="*5Di42:AgnYfiQhv8P(p">
+                                                                        <field name="TEXT">Please enter verification code below into app: </field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD1">
+                                                                      <block type="lexical_variable_get" id="/gUCL9gYY;o@4Y54omzo">
+                                                                        <field name="VAR">global randomNum</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="component_method" id="oM=On=0JZ^pA0K(t5MhU">
+                                                                    <mutation component_type="Texting" method_name="SendMessage" is_generic="false" instance_name="Texting1"></mutation>
+                                                                    <field name="COMPONENT_SELECTOR">Texting1</field>
+                                                                    <next>
+                                                                      <block type="component_method" id="{kEa*|voRF9^UMmPGz_d">
+                                                                        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="LocalDB"></mutation>
+                                                                        <field name="COMPONENT_SELECTOR">LocalDB</field>
+                                                                        <value name="ARG0">
+                                                                          <block type="text" id="xgT*m%/VB%0Fkg{EQ2.:">
+                                                                            <field name="TEXT">randomNum1</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="ARG1">
+                                                                          <block type="lexical_variable_get" id="W:GiVT2Z4E86*nqk_BDb">
+                                                                            <field name="VAR">global randomNum</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="controls_openAnotherScreenWithStartValue" id="Au}1T})@@iiz3tg8b)sc">
+                                                                            <value name="SCREENNAME">
+                                                                              <block type="text" id="f%A^{@ddvTLN{e,GPIY_">
+                                                                                <field name="TEXT">emailConfirm</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="STARTVALUE">
+                                                                              <block type="component_set_get" id="K*w:9%hQ$Ikm-dyk25:^">
+                                                                                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Phone_Number"></mutation>
+                                                                                <field name="COMPONENT_SELECTOR">Phone_Number</field>
+                                                                                <field name="PROP">Text</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
                                                   </block>
                                                 </next>
                                               </block>
@@ -517,9 +722,14 @@ Upon submit, these elements, in this order, are added to a list and then the lis
       </block>
     </statement>
   </block>
-  <block type="component_event" id="w~^hj:?])PqzC=H**k/;" x="0" y="1644">
+  <block type="component_method" id="Ew*L9q{baaS,!?k,cs%?" x="0" y="2637">
+    <mutation component_type="TinyDB" method_name="ClearAll" is_generic="false" instance_name="LocalDB"></mutation>
+    <field name="COMPONENT_SELECTOR">LocalDB</field>
+  </block>
+  <block type="component_event" id="w~^hj:?])PqzC=H**k/;" x="0" y="2692">
     <mutation component_type="Button" instance_name="Cancel" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Cancel</field>
+    <comment pinned="false" h="80" w="160">If user cancels, goes back to the log in page.</comment>
     <statement name="DO">
       <block type="controls_openAnotherScreen" id="!a!Za3RZvpKb{`p.g|,o">
         <value name="SCREEN">

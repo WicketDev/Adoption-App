@@ -2,8 +2,8 @@
   <block type="global_declaration" id="~f8]Kkq$:XC_IGlE6CZ=" x="0" y="0">
     <field name="NAME">listyitem</field>
     <value name="VALUE">
-      <block type="lists_create_with" id="Nva:=^2+Ad)1~s[VTu3V">
-        <mutation items="0"></mutation>
+      <block type="text" id="nf+Yk$y=|yO)aVnNpLRc">
+        <field name="TEXT"></field>
       </block>
     </value>
   </block>
@@ -41,7 +41,7 @@
                 </value>
                 <value name="NUM">
                   <block type="math_number" id="IiYG^79_:iY?kSPWm_V=">
-                    <field name="NUM">3</field>
+                    <field name="NUM">4</field>
                   </block>
                 </value>
               </block>
@@ -60,7 +60,7 @@
                     </value>
                     <value name="NUM">
                       <block type="math_number" id="@{D2%KAi?-/oTVSU.*OB">
-                        <field name="NUM">4</field>
+                        <field name="NUM">5</field>
                       </block>
                     </value>
                   </block>
@@ -79,7 +79,7 @@
                         </value>
                         <value name="NUM">
                           <block type="math_number" id="rO,WZxk_0])XU;/*,jFG">
-                            <field name="NUM">5</field>
+                            <field name="NUM">6</field>
                           </block>
                         </value>
                       </block>
@@ -98,7 +98,7 @@
                             </value>
                             <value name="NUM">
                               <block type="math_number" id="k?fVFnf@vfX%T-mNQm8K">
-                                <field name="NUM">6</field>
+                                <field name="NUM">7</field>
                               </block>
                             </value>
                           </block>
@@ -117,7 +117,7 @@
                                 </value>
                                 <value name="NUM">
                                   <block type="math_number" id="nq/5ISuSd%5i~OAR;2A6">
-                                    <field name="NUM">7</field>
+                                    <field name="NUM">8</field>
                                   </block>
                                 </value>
                               </block>
@@ -136,7 +136,7 @@
                                     </value>
                                     <value name="NUM">
                                       <block type="math_number" id="B:^.S4]z5yTBx5UqdgJJ">
-                                        <field name="NUM">2</field>
+                                        <field name="NUM">3</field>
                                       </block>
                                     </value>
                                   </block>
@@ -155,7 +155,7 @@
                                         </value>
                                         <value name="NUM">
                                           <block type="math_number" id="]b2u7kr257pqHN0fj9J3">
-                                            <field name="NUM">1</field>
+                                            <field name="NUM">2</field>
                                           </block>
                                         </value>
                                       </block>
@@ -174,7 +174,7 @@
                                             </value>
                                             <value name="NUM">
                                               <block type="math_number" id="T}R[-(ghI?@E~yE_/aoT">
-                                                <field name="NUM">8</field>
+                                                <field name="NUM">9</field>
                                               </block>
                                             </value>
                                           </block>
@@ -198,6 +198,24 @@
       </block>
     </statement>
   </block>
+  <block type="component_event" id="b]b*hU%maiQ]U2DLkP0_" x="-426" y="576">
+    <mutation component_type="ListPicker" instance_name="State" event_name="AfterPicking"></mutation>
+    <field name="COMPONENT_SELECTOR">State</field>
+    <statement name="DO">
+      <block type="component_set_get" id="@2U.Q1~JJVJ06_y(m}Wx">
+        <mutation component_type="ListPicker" set_or_get="set" property_name="Text" is_generic="false" instance_name="State"></mutation>
+        <field name="COMPONENT_SELECTOR">State</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="component_set_get" id="hF(@a;a,g1l8XbP/]{[:">
+            <mutation component_type="ListPicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="State"></mutation>
+            <field name="COMPONENT_SELECTOR">State</field>
+            <field name="PROP">Selection</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
   <block type="component_event" id="z1JDId[-C%;IXMV!/OCB" x="20" y="624">
     <mutation component_type="Button" instance_name="Button1" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Button1</field>
@@ -210,7 +228,7 @@
         </value>
         <value name="NUM">
           <block type="math_number" id="7B*YrdWcp,z.A*HaTM|0">
-            <field name="NUM">3</field>
+            <field name="NUM">4</field>
           </block>
         </value>
         <value name="ITEM">
@@ -229,7 +247,7 @@
             </value>
             <value name="NUM">
               <block type="math_number" id="7,8:0-gfb~4Zqwzn!dug">
-                <field name="NUM">4</field>
+                <field name="NUM">5</field>
               </block>
             </value>
             <value name="ITEM">
@@ -248,7 +266,7 @@
                 </value>
                 <value name="NUM">
                   <block type="math_number" id="4j=5MZ9VoD^K5j}hyV7$">
-                    <field name="NUM">7</field>
+                    <field name="NUM">8</field>
                   </block>
                 </value>
                 <value name="ITEM">
@@ -267,7 +285,7 @@
                     </value>
                     <value name="NUM">
                       <block type="math_number" id="p!)=/bA;KjZon$-,?#d7">
-                        <field name="NUM">5</field>
+                        <field name="NUM">6</field>
                       </block>
                     </value>
                     <value name="ITEM">
@@ -286,7 +304,7 @@
                         </value>
                         <value name="NUM">
                           <block type="math_number" id="{14Z+P3K4MkySIN}7?I0">
-                            <field name="NUM">6</field>
+                            <field name="NUM">7</field>
                           </block>
                         </value>
                         <value name="ITEM">
@@ -305,7 +323,7 @@
                             </value>
                             <value name="NUM">
                               <block type="math_number" id=")b-y7vGD?8p_}#U%.Y|1">
-                                <field name="NUM">2</field>
+                                <field name="NUM">3</field>
                               </block>
                             </value>
                             <value name="ITEM">
@@ -324,7 +342,7 @@
                                 </value>
                                 <value name="NUM">
                                   <block type="math_number" id="6R,`;_,0[HqFf5S5w4gV">
-                                    <field name="NUM">1</field>
+                                    <field name="NUM">2</field>
                                   </block>
                                 </value>
                                 <value name="ITEM">
@@ -343,7 +361,7 @@
                                     </value>
                                     <value name="NUM">
                                       <block type="math_number" id="@DKSvnhiN00XnRp=YDIq">
-                                        <field name="NUM">8</field>
+                                        <field name="NUM">9</field>
                                       </block>
                                     </value>
                                     <value name="ITEM">
@@ -365,6 +383,39 @@
                                             <field name="VAR">global listyitem</field>
                                           </block>
                                         </value>
+                                        <next>
+                                          <block type="component_method" id="8??fN|;7py%u!=v4Ws;7">
+                                            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                                            <field name="COMPONENT_SELECTOR">Notifier1</field>
+                                            <value name="ARG0">
+                                              <block type="text" id="q8~!O~QF]vD0,=IV6KT}">
+                                                <field name="TEXT">Update Successful</field>
+                                              </block>
+                                            </value>
+                                            <value name="ARG1">
+                                              <block type="text" id="SL0pB$^w68[l)YK$XTEM">
+                                                <field name="TEXT">Confirmation</field>
+                                              </block>
+                                            </value>
+                                            <value name="ARG2">
+                                              <block type="text" id="O*#=8uwiKBQ`j+V{K:nJ">
+                                                <field name="TEXT">OK</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="controls_openAnotherScreenWithStartValue" id="BLUp({(P,FS0KQjL0SbR">
+                                                <value name="SCREENNAME">
+                                                  <block type="text" id="7x2)9!-R!Ri{*W[*|cDi">
+                                                    <field name="TEXT">ActionPage</field>
+                                                  </block>
+                                                </value>
+                                                <value name="STARTVALUE">
+                                                  <block type="controls_getStartValue" id="fRAI,umHMEPOrNT-X;zA"></block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
                                       </block>
                                     </next>
                                   </block>
@@ -384,7 +435,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="g,)iEtqHfAno]4om$hP3" x="0" y="1377">
+  <block type="component_event" id="g,)iEtqHfAno]4om$hP3" x="30" y="1516">
     <mutation component_type="Button" instance_name="Button2" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Button2</field>
     <statement name="DO">
