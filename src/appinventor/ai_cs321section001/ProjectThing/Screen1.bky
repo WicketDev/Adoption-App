@@ -58,14 +58,10 @@
       <block type="controls_closeApplication" id="8[6B#5_)=09X;$9JMMvl"></block>
     </statement>
   </block>
-  <block type="component_method" id="g{=9kUsjL!m#t15[1aGL" x="753" y="272">
-    <mutation component_type="TinyDB" method_name="ClearAll" is_generic="false" instance_name="LocalDB"></mutation>
-    <field name="COMPONENT_SELECTOR">LocalDB</field>
-  </block>
   <block type="component_event" id="x}K+is=bj~~GGpk39LWU" x="0" y="375">
     <mutation component_type="Button" instance_name="loginButton" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">loginButton</field>
-    <comment pinned="false" h="80" w="160">If user is logging into app, age verification must be checked, and userID(phone number) and password cannot be left blank. If all of the above is true, calls Database and checks for tag that is phonenumber and verifies that the password matches. If not, notifies user of login error and gives a chance to correct, other wise, opens the Forms Page.</comment>
+    <comment pinned="false" h="80" w="160">If user is logging into app, age verification must be checked, and userID(phone number) and password cannot be left blank. If all of the above is true, calls Database and checks for tag that is phone number and verifies that the password matches. If not, notifies user of login error and gives a chance to correct, other wise, opens the Action Page.</comment>
     <statement name="DO">
       <block type="controls_if" id="eSEjpf+`sH_T.kUBa[=k">
         <mutation else="1"></mutation>
