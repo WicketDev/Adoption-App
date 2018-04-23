@@ -214,9 +214,9 @@ Upon submit, these elements, in this order, are added to a list and then the lis
                 <field name="OP">NEQ</field>
                 <value name="A">
                   <block type="component_set_get" id="x81|V%`X9+V2QG4Q2[[)">
-                    <mutation component_type="ListPicker" set_or_get="get" property_name="Text" is_generic="false" instance_name="Gender"></mutation>
+                    <mutation component_type="ListPicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="Gender"></mutation>
                     <field name="COMPONENT_SELECTOR">Gender</field>
-                    <field name="PROP">Text</field>
+                    <field name="PROP">Selection</field>
                   </block>
                 </value>
                 <value name="B">
