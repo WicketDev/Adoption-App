@@ -1,0 +1,167 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="~f8]Kkq$:XC_IGlE6CZ=" x="0" y="0">
+    <field name="NAME">listyitem</field>
+    <value name="VALUE">
+      <block type="lists_create_with" id="Nva:=^2+Ad)1~s[VTu3V">
+        <mutation items="0"></mutation>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="8]sno83!2LUj*b.7%/^l" x="0" y="53">
+    <mutation component_type="Button" instance_name="ShowMatch" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ShowMatch</field>
+    <statement name="DO">
+      <block type="controls_forEach" id="9nP0$pqsCPksm|k}-lAm">
+        <field name="VAR">item</field>
+        <value name="LIST">
+          <block type="component_method" id="lEYFV9A$eDBz;-eh1*~,">
+            <mutation component_type="TinyDB" method_name="GetTags" is_generic="false" instance_name="LocalDB"></mutation>
+            <field name="COMPONENT_SELECTOR">LocalDB</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="controls_if" id="BcorH*::uu)Lo}g-wx/K">
+            <value name="IF0">
+              <block type="lists_is_list" id="aH)GUOgsXAlsvNq2V|GV">
+                <value name="ITEM">
+                  <block type="component_method" id="f32+b;l%|kdp~,W.?L?#">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                    <field name="COMPONENT_SELECTOR">LocalDB</field>
+                    <value name="ARG0">
+                      <block type="lexical_variable_get" id="waA)@SPiU?`0G,KTqT6R">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="zL/:SoY`hFBoJ(P1f$,%">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_forEach" id="wpGGr~8W~u}JEQw}V:|S">
+                <field name="VAR">component</field>
+                <value name="LIST">
+                  <block type="component_method" id="L)3z:x`KV!eZS9glZ?kx">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+                    <field name="COMPONENT_SELECTOR">LocalDB</field>
+                    <value name="ARG0">
+                      <block type="lexical_variable_get" id="513Y!?B!xIGqICuDMD^6">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="GwRqO4k2uL](i.6xGSY(">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="controls_if" id="zi5e%0[/[ixs$Fh7Ol6b">
+                    <value name="IF0">
+                      <block type="logic_compare" id="D8BoTjilZR4lwOZ!s7X8">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="lexical_variable_get" id="quo+Y-2;[x{D20+SHh]+">
+                            <field name="VAR">component</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="component_set_get" id="W,ENMV8Xt@R4OhK?J1|n">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="SearchData"></mutation>
+                            <field name="COMPONENT_SELECTOR">SearchData</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="component_set_get" id="$w{{uWg6-KY3GYt22(DM">
+                        <mutation component_type="ListView" set_or_get="set" property_name="ElementsFromString" is_generic="false" instance_name="ListView1"></mutation>
+                        <field name="COMPONENT_SELECTOR">ListView1</field>
+                        <field name="PROP">ElementsFromString</field>
+                        <value name="VALUE">
+                          <block type="lexical_variable_get" id="L3/BcGbOT;#*vB%:??R2">
+                            <field name="VAR">item</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="lexical_variable_set" id="kxd]Z_AEX~yY(NL56zFV">
+                            <field name="VAR">global listyitem</field>
+                            <value name="VALUE">
+                              <block type="lexical_variable_get" id=":w!K;VvGXqt)w1!~fD8O">
+                                <field name="VAR">item</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="c.xvyT;dfNtpKI}G;[Zf" x="0" y="440">
+    <mutation component_type="ListView" instance_name="ListView1" event_name="AfterPicking"></mutation>
+    <field name="COMPONENT_SELECTOR">ListView1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="u^x^7Lm@cn7Nt.Aa8es2">
+        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="ListView1"></mutation>
+        <field name="COMPONENT_SELECTOR">ListView1</field>
+        <field name="PROP">Elements</field>
+        <value name="VALUE">
+          <block type="component_method" id=")@p?uevf4f9X+pCx*WU^">
+            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="LocalDB"></mutation>
+            <field name="COMPONENT_SELECTOR">LocalDB</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="[#H,zbMWf79j8cG+?2ao">
+                <field name="VAR">global listyitem</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text" id="R@K%Neo4Y[FGSKB)q|!7">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="0wM((X,SGoXr$4q=W6]w" x="0" y="583">
+    <mutation component_type="Button" instance_name="ActionPage" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ActionPage</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="U,1LRBP5NM~Yia~aHoLR">
+        <value name="SCREEN">
+          <block type="text" id="jzdp,};z1q;$n+UAih+p">
+            <field name="TEXT">ActionPage</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="%mWtwPqrwZ:+eXd0eN=9" x="0" y="673">
+    <mutation component_type="Button" instance_name="My_Info" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">My_Info</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="D*dw{e?zH3w*{}5g{%zF">
+        <value name="SCREEN">
+          <block type="text" id="pL7QN_*V$.sFS:Mc}H*l">
+            <field name="TEXT">My_Info</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="167" language-version="21"></yacodeblocks>
+</xml>
