@@ -144,9 +144,9 @@
             <mutation items="5"></mutation>
             <value name="ADD0">
               <block type="component_set_get" id="4s8G-(NX{)W6WYWQ!})_">
-                <mutation component_type="DatePicker" set_or_get="get" property_name="MonthInText" is_generic="false" instance_name="DOB"></mutation>
+                <mutation component_type="DatePicker" set_or_get="get" property_name="Month" is_generic="false" instance_name="DOB"></mutation>
                 <field name="COMPONENT_SELECTOR">DOB</field>
-                <field name="PROP">MonthInText</field>
+                <field name="PROP">Month</field>
               </block>
             </value>
             <value name="ADD1">
@@ -719,7 +719,11 @@ Upon submit, these elements, in this order, are added to a list and then the lis
                             <field name="COMPONENT_SELECTOR">Notifier1</field>
                             <value name="ARG0">
                               <block type="text" id="r^mTx73YOA}^GrIomdZ@">
+<<<<<<< HEAD
                                 <field name="TEXT">Passwords do not match or are blank.</field>
+=======
+                                <field name="TEXT">Passwords do not match.</field>
+>>>>>>> 7ffc5510b39db8d25dc2df0813e51909a81ad7e7
                               </block>
                             </value>
                           </block>

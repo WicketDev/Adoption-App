@@ -198,7 +198,11 @@
       </block>
     </statement>
   </block>
+<<<<<<< HEAD
   <block type="component_event" id="b]b*hU%maiQ]U2DLkP0_" x="0" y="611">
+=======
+  <block type="component_event" id="b]b*hU%maiQ]U2DLkP0_" x="-426" y="576">
+>>>>>>> 7ffc5510b39db8d25dc2df0813e51909a81ad7e7
     <mutation component_type="ListPicker" instance_name="State" event_name="AfterPicking"></mutation>
     <field name="COMPONENT_SELECTOR">State</field>
     <statement name="DO">
@@ -216,6 +220,7 @@
       </block>
     </statement>
   </block>
+<<<<<<< HEAD
   <block type="component_event" id="!,b(GAJ)!{t5H/?jp@P-" x="0" y="703">
     <mutation component_type="ListPicker" instance_name="Gender" event_name="AfterPicking"></mutation>
     <field name="COMPONENT_SELECTOR">Gender</field>
@@ -235,6 +240,9 @@
     </statement>
   </block>
   <block type="component_event" id="z1JDId[-C%;IXMV!/OCB" x="0" y="795">
+=======
+  <block type="component_event" id="z1JDId[-C%;IXMV!/OCB" x="20" y="624">
+>>>>>>> 7ffc5510b39db8d25dc2df0813e51909a81ad7e7
     <mutation component_type="Button" instance_name="Button1" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Button1</field>
     <statement name="DO">
@@ -453,7 +461,11 @@
       </block>
     </statement>
   </block>
+<<<<<<< HEAD
   <block type="component_event" id="g,)iEtqHfAno]4om$hP3" x="0" y="1713">
+=======
+  <block type="component_event" id="g,)iEtqHfAno]4om$hP3" x="30" y="1516">
+>>>>>>> 7ffc5510b39db8d25dc2df0813e51909a81ad7e7
     <mutation component_type="Button" instance_name="Button2" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Button2</field>
     <statement name="DO">
